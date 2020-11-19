@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="06e62bf4-061e-482d-8f65-c9183e818681" name="Default Changelist" comment="" />
+    <list default="true" id="06e62bf4-061e-482d-8f65-c9183e818681" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/img/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/php/checkOut.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/checkOut.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/checkOut.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/checkOut.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/html/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/title_background.jpg" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -17,16 +26,40 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1jLkpQATJUu0DzTspG9flevysaE" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="DatabaseDriversLRU" value="mysql" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="jdk.selected.JAVA_MODULE" value="15" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -37,16 +70,42 @@
       <option name="presentableId" value="Default" />
       <updated>1603590942042</updated>
       <workItem from="1603590943276" duration="742000" />
+      <workItem from="1605766934440" duration="2072000" />
+      <workItem from="1605820255296" duration="2250000" />
+      <workItem from="1605825189960" duration="239000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="354" y="135" key="#Inspections" timestamp="1605768333406">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="354" y="135" key="#Inspections/0.0.1440.900@0.0.1440.900" timestamp="1605768333405" />
+    <state x="320" y="115" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1605825417760">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="320" y="115" width="1071" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1605825417760" />
     <state x="1357" y="453" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1603591025094">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="1357" y="453" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1603591025094" />
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1605768905483">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="458" y="204" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1440.900@0.0.1440.900" timestamp="1605768905483" />
+    <state x="539" y="380" key="NewPhpFileDialog" timestamp="1605820436145">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="539" y="380" key="NewPhpFileDialog/0.0.1440.900@0.0.1440.900" timestamp="1605820436145" />
+    <state x="354" y="72" key="new project wizard" timestamp="1605820417886">
+      <screen x="0" y="0" width="1440" height="900" />
+    </state>
+    <state x="354" y="72" key="new project wizard/0.0.1440.900@0.0.1440.900" timestamp="1605820417886" />
   </component>
 </project>
