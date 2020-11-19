@@ -1,3 +1,8 @@
+<?php
+    include ('database.php');
+    $query = 'SELECT * FROM user';
+    $users = $db->query($query);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,7 +35,7 @@
 				7. check out buttom, and process final checkout <maybe>
 				-->
 
-		<form>
+		<form action="checkOut.php" method="post">
 			<fieldset>
 				<legend>Personal info</legend>
 					<!-- part 1 -->
