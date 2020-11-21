@@ -35,6 +35,7 @@
         foreach ($items as $item){
             echo "<div class='product'>"
                     ."<h3>" . $item['name'] . "</h3>"
+                    ."<img src='" . $item['image_link'] . "'>"
                     ."<h4>$" . $item['price'] . "</h4>";
 
             if($item['quantity'] > 20){
