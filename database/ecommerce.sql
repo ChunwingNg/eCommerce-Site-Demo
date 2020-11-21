@@ -22,7 +22,7 @@ DROP TABLE IF EXISTS `ecommerce`.`user` ;
 CREATE TABLE IF NOT EXISTS `ecommerce`.`user` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `userN` VARCHAR(45) NOT NULL,
-  `passW` VARCHAR(45) NOT NULL,
+  `passW` VARCHAR(255) NOT NULL,
   `email` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `ID_UNIQUE` (`id` ASC))
@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS `ecommerce`.`address` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `line1` VARCHAR(45) NOT NULL,
-  `apt` VARCHAR(45) NULL DEFAULT NULL,
+  `line2` VARCHAR(45) NOT NULL,
   `city` VARCHAR(45) NOT NULL,
   `state` VARCHAR(45) NOT NULL,
   `zip` INT(11) NOT NULL,
@@ -70,7 +70,7 @@ CREATE TABLE IF NOT EXISTS `ecommerce`.`card` (
   `cvv` INT(11) NOT NULL,
   `fk_card_user` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
-  UNIQUE INDEX `id_UNIQUE` (`id` ASC) VISIBLE,
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
   INDEX `fk_card_user_idx` (`fk_card_user` ASC),
   CONSTRAINT `fk_card_user`
     FOREIGN KEY (`fk_card_user`)
