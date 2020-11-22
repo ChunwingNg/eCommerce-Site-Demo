@@ -23,6 +23,7 @@ if(isset($_POST['login-action']))
             alert("Invalid username/password combination.\nPlease try again.")
         </script>
         <?php
+
         include("login.php");
     }
     else{
@@ -37,12 +38,12 @@ if(isset($_POST['login-action']))
             include("userpage.php");
         }
         else{
-            include("login.php");
             ?>
             <script>
                 prompt("Invalid username/password combination.\nPlease try again.")
             </script>
             <?php
+            include("login.php");
         }
     }
 }
