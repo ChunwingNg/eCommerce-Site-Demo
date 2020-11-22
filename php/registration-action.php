@@ -32,7 +32,7 @@ if(isset($_POST['registration-action']))
         if($count['num'] > 0){
             ?>
             <script>
-                alert("Unfortunatly that username has already been taken.")
+                alert("Unfortunately that username has already been taken.")
             </script>
             <?php
             include("registration.php");

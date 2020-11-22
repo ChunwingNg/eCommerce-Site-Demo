@@ -40,7 +40,7 @@ if(isset($_POST['login-action']))
         else{
             ?>
             <script>
-                prompt("Invalid username/password combination.\nPlease try again.")
+                alert("Invalid username/password combination.\nPlease try again.")
             </script>
             <?php
             include("login.php");
