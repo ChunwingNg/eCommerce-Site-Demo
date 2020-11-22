@@ -1,4 +1,7 @@
 <?php
+
+session_start()
+
 if(isset($_POST['login-action']))
 {
     $userNm = filter_input(INPUT_POST, 'userNm');
