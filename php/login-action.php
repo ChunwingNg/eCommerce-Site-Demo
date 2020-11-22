@@ -16,7 +16,7 @@ if(isset($_POST['login-action']))
     //printf("%s (%s)\n", $login['userN'], $login['passW']);
 
     if($login === false){
-        printf("Incorrect username / password combonation");
+        printf("Incorrect username / password combination");
         include("login.php");
     }
     else{
@@ -27,7 +27,7 @@ if(isset($_POST['login-action']))
             include("login.php");
         }
         else{
-            printf("Incorrect username / password combonation");
+            printf("Incorrect username / password combination");
             include("login.php");
         }
     }
