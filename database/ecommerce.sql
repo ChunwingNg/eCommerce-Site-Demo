@@ -82,20 +82,6 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `ecommerce`.`catagory_name`
--- -----------------------------------------------------
-DROP TABLE IF EXISTS `ecommerce`.`catagory_name` ;
-
-CREATE TABLE IF NOT EXISTS `ecommerce`.`catagory_name` (
-  `id` INT(11) NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(45) NOT NULL,
-  PRIMARY KEY (`id`),
-  UNIQUE INDEX `ID_UNIQUE` (`id` ASC))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
-
-
--- -----------------------------------------------------
 -- Table `ecommerce`.`catalog_item`
 -- -----------------------------------------------------
 DROP TABLE IF EXISTS `ecommerce`.`catalog_item` ;
@@ -114,27 +100,37 @@ DEFAULT CHARACTER SET = utf8;
 
 
 -- -----------------------------------------------------
--- Table `ecommerce`.`categories`
+-- Table `ecommerce`.`orders`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `ecommerce`.`categories` ;
+DROP TABLE IF EXISTS `ecommerce`.`orders` ;
 
-CREATE TABLE IF NOT EXISTS `ecommerce`.`categories` (
-  `fk_cat_catalog` INT(11) NOT NULL,
-  `fk_cat_catname` INT(11) NOT NULL,
-  INDEX `fk_cat_catalog_idx` (`fk_cat_catalog` ASC),
-  INDEX `fk_cat_catname_idx` (`fk_cat_catname` ASC),
-  CONSTRAINT `fk_cat_catalog`
-    FOREIGN KEY (`fk_cat_catalog`)
-    REFERENCES `ecommerce`.`catalog_item` (`id`)
+CREATE TABLE IF NOT EXISTS `ecommerce`.`orders` (
+  `id` INT(11) NOT NULL,
+  `fk_orders_user` INT(11) NOT NULL,
+  `fk_orders_card` INT(11) NOT NULL,
+  `fk_orders_address` INT(11) NOT NULL,
+  `ordertotal` FLOAT NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE INDEX `id_UNIQUE` (`id` ASC),
+  INDEX `fk_orders_user_idx` (`fk_orders_user` ASC),
+  INDEX `fk_orders_card_idx` (`fk_orders_card` ASC),
+  INDEX `fk_orders_address_idx` (`fk_orders_address` ASC),
+  CONSTRAINT `fk_orders_user`
+    FOREIGN KEY (`fk_orders_user`)
+    REFERENCES `ecommerce`.`user` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION,
-  CONSTRAINT `fk_cat_catname`
-    FOREIGN KEY (`fk_cat_catname`)
-    REFERENCES `ecommerce`.`catagory_name` (`id`)
+  CONSTRAINT `fk_orders_card`
+    FOREIGN KEY (`fk_orders_card`)
+    REFERENCES `ecommerce`.`card` (`id`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_orders_address`
+    FOREIGN KEY (`fk_orders_address`)
+    REFERENCES `ecommerce`.`address` (`id`)
     ON DELETE NO ACTION
     ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8;
+ENGINE = InnoDB;
 
 
 SET SQL_MODE=@OLD_SQL_MODE;
