@@ -1,6 +1,5 @@
 <?php
-
-session_start()
+session_start();
 
 if(isset($_POST['login-action']))
 {
@@ -9,7 +8,7 @@ if(isset($_POST['login-action']))
 
     //Queries the row the username is on
     require_once('database-connection.php');
-    $query = 'SELECT id, userN, passW FROM user WHERE userN = :userNm';
+    $query = 'SELECT id, userN, passW, email FROM user WHERE userN = :userNm';
     $statement = $db->prepare($query);
     $statement->bindValue(':userNm', $userNm);
     $statement->execute();
@@ -19,7 +18,11 @@ if(isset($_POST['login-action']))
     //printf("%s (%s)\n", $login['userN'], $login['passW']);
 
     if($login === false){
-        printf("Incorrect username / password combonation");
+        ?>
+        <script>
+            alert("Invalid username/password combination.\nPlease try again.")
+        </script>
+        <?php
         include("login.php");
     }
     else{
@@ -27,11 +30,19 @@ if(isset($_POST['login-action']))
         $validPassword = password_verify($passWd, $login['passW']);
 
         if($validPassword){
-            include("login.php");
+            $_SESSION['isLogged'] = 1;
+            $_SESSION['id'] = $login['id'];
+            $_SESSION['email'] = $login['email'];
+            $_SESSION['name'] = $login['userN'];
+            include("userpage.php");
         }
         else{
-            printf("Incorrect username / password combonation");
             include("login.php");
+            ?>
+            <script>
+                prompt("Invalid username/password combination.\nPlease try again.")
+            </script>
+            <?php
         }
     }
 }

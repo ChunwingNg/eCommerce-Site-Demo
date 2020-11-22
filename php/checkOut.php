@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    require_once('database-connection.php');
+
+    $addresses = $db->query("SELECT * FROM address WHERE fk_address_user=$_SESSION[id]");
+    $cards = $db->query("SELECT * FROM card WHERE fk_card_user=$_SESSION[id]");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +34,18 @@
             <!-- part 2 address include: street, city, state, zip-->
             <label for="ship_address">Shipping Address:</label>
             <br>
+
+            <label for="stored-addr">Saved Address: </label>
+            <select name="stored_address">
+            <?php foreach ($addresses as $address):?>
+                <option>
+                    <p><?php echo $address['line1'];?></p>
+                    <p><?php echo $address['city'];?>, <?php echo $address['state'];?> <?php echo $address['zip'];?></p>
+                </option>
+            <?php endforeach;?>
+            </select>
+            <br>
+
             <input type="text" name="ship_address" id="street_address" placeholder="Street">
             <input type="text" name="ship_address" id="city_address" placeholder="City">
             <select name="ship_address">

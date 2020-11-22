@@ -1,3 +1,10 @@
+<?php
+    require_once('database-connection.php');
+
+    //$addresses = $db->query("SELECT * FROM address WHERE fk_address_user=$_SESSION[id]");
+    //$cards = $db->query("SELECT * FROM card WHERE fk_card_user=$_SESSION[id]");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

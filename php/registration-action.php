@@ -11,9 +11,13 @@ if(isset($_POST['registration-action']))
     if ($user == null || $pass == null || $confirmPass == null || $email == null) 
     {
         $error = "Invalid registration data, please try again.";
+
         ?>
-        <p class="error">Invalid registration data. Check all fields and try again.<p>
+        <script>
+            alert("Error: Please make sure to fill in all registration data.")
+        </script>
         <?php
+
         include("registration.php");
     } 
     else 
@@ -27,14 +31,18 @@ if(isset($_POST['registration-action']))
 
         if($count['num'] > 0){
             ?>
-            <p class="error">Error: That username has already been taken.<p>
+            <script>
+                alert("Unfortunatly that username has already been taken.")
+            </script>
             <?php
             include("registration.php");
             die();
         }
         if($pass != $confirmPass){
             ?>
-            <p class="error">Error: Passwords do not match.<p>
+            <script>
+                alert("Error: Passwords must match.")
+            </script>
             <?php
             include("registration.php");
             die();
