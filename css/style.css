@@ -112,25 +112,7 @@ body {
 }
 
 
-/* Styling for HomePage icon */
-
-@font-face {
-    font-family: 'maroon_boldregular';
-    src: url('MaroonBold.ttf');
-}
-
-.title {
-    font-size: 50px;
-    color: #1EB1C8;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: maroon_boldregular;
-    padding: 300px 0;
-}
-
-
-/* button styling*/
+/* Homepage button styling*/
 
 .container {
     align-items: center;
@@ -139,10 +121,6 @@ body {
     justify-content: center;
     text-align: center;
     padding: 40px 0px;
-    width: 240px;
-    top: 425px;
-    left: 625px;
-    position: fixed;
 }
 
 .btn {
@@ -207,4 +185,82 @@ body {
     left: 120%;
     -webkit-transform: rotate(40deg);
     transform: rotate(40deg);
+}
+
+
+/* Styling for HomePage */
+
+@font-face {
+    font-family: maroon_bold;
+    src: url('MaroonBold.ttf');
+}
+
+.title {
+    font-size: 50px;
+    color: #42BCF3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: maroon_bold;
+    padding-top: 125px;
+}
+
+.logo {
+    transform: rotate(35deg);
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 125px;
+}
+
+.desc {
+    width: 70%;
+    font-size: 2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 82px;
+    color: #42BCF3;
+}
+
+.left-c {
+    float: left;
+    text-align: center;
+    justify-content: center;
+    width: 40%;
+    margin-left: 190px;
+    margin-top: 75px;
+    background-color: #0592d33d;
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px #768998, 2px 2px 5px rgba(94, 104, 121, 0.288);
+    padding: 25px 0px;
+}
+
+.right-c {
+    float: right;
+    width: 40%;
+    text-align: center;
+    justify-content: center;
+    margin-right: 190px;
+    margin-top: 75px;
+    background-color: #0592d33d;
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px #768998, 2px 2px 5px rgba(94, 104, 121, 0.288);
+    padding: 26px 0px;
+}
+
+
+/* Footer */
+
+footer {
+    position: absolute;
+    justify-content: right;
+    text-align: right;
+    bottom: 0;
+    background-color: #03203E;
+    padding: 10px 0;
+    width: 100%;
+    color: #42BCF3;
+}
+
+.footer_text {
+    margin-right: 50px;
 }

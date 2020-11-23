@@ -59,3 +59,14 @@
         </form>
     </div>
 </div>
+
+<?php
+    function template_footer() {
+        $year = date('Y');
+        echo <<<EOT
+            <footer>
+                <p class="right footer_text">&#169; $year, Apollo 42 Express</p>
+            </footer>
+        EOT;
+    }
+?>
