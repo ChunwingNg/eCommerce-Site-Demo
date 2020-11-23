@@ -19,7 +19,7 @@ require_once('database-connection.php');
         </script>
         <?php
 
-        include("userpage.php");
+        header("Location: userpage.php");
     } 
     else
     {
@@ -35,6 +35,6 @@ require_once('database-connection.php');
     $statement->execute();
     $statement->closeCursor();
 
-    include("userpage.php");
+    header("Location: userpage.php");
     }
 ?>
