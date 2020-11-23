@@ -26,14 +26,16 @@
                 $_SESSION['cart'] = array($product_id => $quantity);
             }
         }
-        include_once('shoppingcart.php');
+        header('Location: shoppingcart.php');
+        exit;
     }
 
     //Will remove from cart if it remove is specified
     if (isset($_GET['remove']) && is_numeric($_GET['remove']) && isset($_SESSION['cart']) && isset($_SESSION['cart'][$_GET['remove']])) {
         //removes the id retrieved from $_GET['remove'] from the cart
         unset($_SESSION['cart'][$_GET['remove']]);
-        include_once('shoppingcart.php');
+        header('Location: shoppingcart.php');
+        exit;
     }
 
     //Will update the cart if update is specified
@@ -49,6 +51,12 @@
                 }
             }
         }
-        include_once('shoppingcart.php');
+        header('Location: shoppingcart.php');
+        exit;
+    }
+
+    if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
+        header('Location: checkOut.php');
+        exit;
     }
 ?>

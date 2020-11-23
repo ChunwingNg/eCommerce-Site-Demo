@@ -58,7 +58,7 @@
                     </td>
                     <td class="price">&dollar;<?=$item['price']?></td>
                     <td class="quantity">
-                        <input type="number" name="quantity-<?=$item['id']?>" value="<?=$cart_items[$items['id']]?>" min="1" max="<?=$items['quantity']?>" placeholder="Quantity" required>
+                        <input type="number" name="quantity-<?=$item['id']?>" value="<?=$cart_items[$item['id']]?>" min="1" max="<?=$items['quantity']?>" placeholder="Quantity" required>
                     </td>
                     <td class="price">&dollar;<?=$item['price'] * $cart_items[$item['id']]?></td>
                 </tr>
