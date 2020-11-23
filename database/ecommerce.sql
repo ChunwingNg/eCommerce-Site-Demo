@@ -68,7 +68,7 @@ CREATE TABLE IF NOT EXISTS `ecommerce`.`card` (
   `expMonth` INT(2) NOT NULL,
   `expYear` INT(2) NOT NULL,
   `number` VARCHAR(45) NOT NULL,
-  `cvv` INT(11) NOT NULL,
+  `cvv` INT(4) NOT NULL,
   `fk_card_user` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `id_UNIQUE` (`id` ASC),
