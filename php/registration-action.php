@@ -18,7 +18,7 @@ if(isset($_POST['registration-action']))
         </script>
         <?php
 
-        include("registration.php");
+        header("Location: registration.php");
     } 
     else 
     {
@@ -35,7 +35,7 @@ if(isset($_POST['registration-action']))
                 alert("Unfortunately that username has already been taken.")
             </script>
             <?php
-            include("registration.php");
+            header("Location: registration.php");
             die();
         }
         if($pass != $confirmPass){
@@ -44,7 +44,7 @@ if(isset($_POST['registration-action']))
                 alert("Error: Passwords must match.")
             </script>
             <?php
-            include("registration.php");
+            header("Location: registration.php");
             die();
         }
         //Hash the password
@@ -58,7 +58,7 @@ if(isset($_POST['registration-action']))
         $statement->bindValue(':email', $email);
         $statement->execute();
         $statement->closeCursor();
-        include('login.php');
+        header("Location: login.php");
     }
 }
 ?>

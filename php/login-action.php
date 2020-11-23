@@ -24,7 +24,7 @@ if(isset($_POST['login-action']))
         </script>
         <?php
 
-        include("login.php");
+        header("Location: login.php");
     }
     else{
         //Verify the hashed password
@@ -35,7 +35,7 @@ if(isset($_POST['login-action']))
             $_SESSION['id'] = $login['id'];
             $_SESSION['email'] = $login['email'];
             $_SESSION['name'] = $login['userN'];
-            include("userpage.php");
+            header("Location: homepage.php");
         }
         else{
             ?>
@@ -43,7 +43,7 @@ if(isset($_POST['login-action']))
                 alert("Invalid username/password combination.\nPlease try again.")
             </script>
             <?php
-            include("login.php");
+            header("Location: login.php");
         }
     }
 }

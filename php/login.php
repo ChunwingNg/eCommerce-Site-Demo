@@ -31,7 +31,7 @@
 <!--        <label>Password</label>-->
         </div>
         <div class="field">
-        <button type="submit" name="login-action" value="Login" class="btn btn1"><a href="userpage.php">Login</a></button>
+        <button type="submit" name="login-action" value="Login" class="btn btn1">Login</button>
         </div>
     </form>
 <br>

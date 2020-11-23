@@ -11,4 +11,5 @@ body{
     display: grid;
     place-items: center;
     text-align: center;
+    background-color: white;
 }

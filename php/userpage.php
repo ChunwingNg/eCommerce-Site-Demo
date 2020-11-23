@@ -1,10 +1,22 @@
 <?php
+    session_start();
     require_once('database-connection.php');
 
     $addresses = $db->query("SELECT * FROM address WHERE fk_address_user=$_SESSION[id]");
     $cards = $db->query("SELECT * FROM card WHERE fk_card_user=$_SESSION[id]");
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Info</title>
+    <link rel="stylesheet" type="text/css" href="../css/userpage.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<body>
 <h1>Account Overview</h1>
 
 <div>
@@ -82,6 +94,5 @@
 
     <a href="">Add New Card</a>
 </div>
-
-<div>
-</div>
+    </body>
+</html>
