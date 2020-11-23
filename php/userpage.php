@@ -64,13 +64,14 @@
 
         <div>
             <h3>Payment Information</h3>
-
             <?php foreach ($cards as $card):?>
+                <div>
                 <p>**** **** **** <?php echo substr ($card['number'], -4);?></p>
-                <form action="del_card.php" method="post">
+                <form action="card-delete.php" method="post">
                     <input type="hidden" name="card_id" value=<?php echo $card['id'];?>>
                     <input type="submit" value="Delete Card">
                 </form>
+                </div>
             <?php endforeach;?>
 
             <a href="card-form.php">Add New Card</a>
