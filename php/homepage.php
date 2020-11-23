@@ -11,7 +11,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="../html/style.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Welcome!</title>
 </head>
 

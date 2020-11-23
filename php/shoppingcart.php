@@ -29,6 +29,15 @@
     }
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+</head>
+<body>
+
 <div class="link-icons">
      <a href="shoppingcart.php">
         <i class="fas fa-shopping-cart"></i>
@@ -84,3 +93,5 @@
         </div>
     </form>
 </div>
+</body>
+</html>
