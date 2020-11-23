@@ -251,3 +251,34 @@ footer {
 h1 {
     color: 42BCF3;
 }
+
+
+/* userPage styling */
+
+#contact_info {
+    float: left;
+    width: 45%;
+    border: 1px solid white;
+    background-color: #D1E1E2;
+    color: #3B4F5E;
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px #768998, 2px 2px 5px rgba(94, 104, 121, 0.288);
+    padding: 25px 0px;
+}
+
+#address_form {
+    float: right;
+    width: 54.5%;
+    border: 1px solid white;
+    background-color: #D1E1E2;
+    color: #3B4F5E;
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px #768998, 2px 2px 5px rgba(94, 104, 121, 0.288);
+    padding: 26px 0px;
+}
+
+.account-header {
+    text-align: center;
+    margin-top: 80px;
+    padding-bottom: 50px;
+}
