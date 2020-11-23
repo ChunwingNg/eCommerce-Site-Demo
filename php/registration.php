@@ -1,5 +1,5 @@
 <?php
-require ('database-connection.php');
+    require ('database-connection.php');
 ?>
 
 <!DOCTYPE html>
@@ -7,11 +7,16 @@ require ('database-connection.php');
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="../css/registration.css">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
+    <link rel="stylesheet" type="text/css" href="../css/login.css">
     <script src="https://kit.fontawesome.com/5c49374a2a.js" crossorigin="anonymous"></script>
 
 </head>
+
+
+<?php
+    include('base.php');
+?>
+
 <body>
 <div class="content">
 
@@ -45,14 +50,15 @@ require ('database-connection.php');
             <br>
 
             <div class="field">
-            <button class="submit" type="submit" name="registration-action" value="Submit Registration">Submit</button>
+            <button type="submit" name="registration-action" value="Submit Registration" class="submit_b">Submit</button>
             </div>
         </form>
         <div class="field">
-            <button type="button"><a href="login.php" class="login"s>Back to Login</a></button>
+            <button type="button" class="submit_b"><a href="login.php">Back to Login</a></button>
         </div>
     </main>
 </div>
+<?=template_footer()?>
 </body>
 
 </html>

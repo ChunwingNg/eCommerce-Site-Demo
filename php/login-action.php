@@ -4,6 +4,12 @@
         session_start(); 
     }  
 
+if(isset($_SESSION['isLogged']) && $_SESSION['isLogged'] == 1){
+    header("Location: error.php");
+    exit;
+}
+
+
 if(isset($_POST['login-action']))
 {
     $userNm = filter_input(INPUT_POST, 'userNm');
@@ -47,6 +53,7 @@ if(isset($_POST['login-action']))
             </script>
             <?php
             header("Location: login.php");
+            exit;
         }
     }
 }

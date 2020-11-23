@@ -20,7 +20,7 @@
             <div class="right-c">
                 <h3 class="desc">Apollo 42 express is a vast Space-based enterprise that sells all the commodities that you would need on your travels through the endless expanse of space. We value our customers time with our state of the art hyperdrive delivery service that is guaranteed to arrive in your solar system within 50 nanoseconds or your money back guarantee. Whether it be fresh hypermatter mined from the homeworld of the Terasec species or a simple water bottle from earth. We'll get it to you quickly and efficiently. Hit the button below to explore our catalog.</h3>
                 <div class="middle">
-                    <a href="catalog.php" class="btn"><span>Blast Off!</span></a>
+                    <a href="catalog.php" class="ebtn"><span>Blast Off!</span></a>
                 </div>
             </div>
         </div>

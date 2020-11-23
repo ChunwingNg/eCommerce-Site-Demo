@@ -2,7 +2,12 @@
     if(!isset($_SESSION)) 
     { 
         session_start(); 
-    } 
+    }
+
+    if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] == 0){
+        header("Location: error.php");
+        exit;
+    }
     require_once('database-connection.php');
 
     $addresses = $db->query("SELECT * FROM address WHERE fk_address_user=$_SESSION[id]");

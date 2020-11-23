@@ -55,7 +55,7 @@
     <div class="search-container">
         <form action="catalog.php" method="post">
             <input type="text" placeholder="Search.." name="search">
-            <button type="submit" name="catalog_search"><i class="fa fa-search"></i></button>
+            <button type="submit" name="catalog_search" class="search_b"><i class="fa fa-search"></i></button>
         </form>
     </div>
 </div>
