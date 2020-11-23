@@ -24,6 +24,9 @@
 </head>
 
 <body>
+
+    <?php require_once('base.php');?>
+
     <h1>Catalog</h1>
     <?php
 
