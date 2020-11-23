@@ -5,7 +5,6 @@
         session_start(); 
     } 
     require_once('database-connection.php');
-    require_once('base.php');
 
     $cart_items = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
     $items = array();
