@@ -115,8 +115,8 @@ body {
 /* Homepage button styling*/
 
 .middle {
-    margin-top: 65px;
-    margin-bottom: 50px;
+    margin-top: 5%;
+    margin-bottom: 5%;
     width: 220px;
     margin-left: auto;
     margin-right: auto;
@@ -172,14 +172,14 @@ body {
     justify-content: center;
     align-items: center;
     font-family: maroon_bold;
-    padding-top: 125px;
+    padding-top: 10%;
 }
 
 .logo {
     transform: rotate(35deg);
     margin-left: auto;
     margin-right: auto;
-    margin-bottom: 125px;
+    margin-bottom: 10%;
 }
 
 .desc {
@@ -187,7 +187,7 @@ body {
     font-size: 2em;
     margin-left: auto;
     margin-right: auto;
-    margin-top: 82px;
+    margin-top: 4%;
     color: #42BCF3;
 }
 
@@ -196,7 +196,7 @@ body {
     text-align: center;
     justify-content: center;
     width: 40%;
-    margin-left: 190px;
+    margin-left: 8%;
     margin-top: 75px;
     background-color: #0592d33d;
     border-radius: 10px;
@@ -209,12 +209,12 @@ body {
     width: 40%;
     text-align: center;
     justify-content: center;
-    margin-right: 190px;
+    margin-right: 8%;
     margin-top: 75px;
     background-color: #0592d33d;
     border-radius: 10px;
     box-shadow: -3px -3px 7px #768998, 2px 2px 5px rgba(94, 104, 121, 0.288);
-    padding: 26px 0px;
+    padding: 25px 0px;
 }
 
 
@@ -233,4 +233,17 @@ footer {
 
 .footer_text {
     margin-right: 50px;
+}
+
+
+/* Catalog styling */
+
+.catalog_content {
+    background-color: #0592d33d;
+    border-radius: 10px;
+    box-shadow: -3px -3px 7px #768998, 2px 2px 5px rgba(94, 104, 121, 0.288);
+    padding: 26px 0px;
+    margin-right: 190px;
+    margin-left: 190px;
+    margin-top: 75px;
 }
