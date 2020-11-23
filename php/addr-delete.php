@@ -12,5 +12,5 @@ if($address != false){
     $statement->closeCursor();
 }
 
-header("Location: userpage.php");
+header('Location: userpage.php');
 ?>
