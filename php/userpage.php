@@ -1,5 +1,8 @@
 <?php
-    session_start();
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
     require_once('database-connection.php');
 
     $addresses = $db->query("SELECT * FROM address WHERE fk_address_user=$_SESSION[id]");

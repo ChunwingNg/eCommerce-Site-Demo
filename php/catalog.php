@@ -1,6 +1,9 @@
 <?php
 
-    session_start();
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
 
     require_once('database-connection.php');
 
@@ -52,6 +55,11 @@
 
             echo "<h4>" . $avail . "</h4>"
                     ."<p>" . $item['desc'] . "</p>"
+                        ."<form action='update-cart.php' method='post'>"
+                            ."<input type='number' name='quantity' value=1 min=1 max=" . $item['quantity'] . " placeholder='Quantity' required>"
+                            ."<input type='hidden' name='product_id' value=" . $item['id']. ">"
+                            ."<input type='submit' value='Add To Cart'>"
+                        ."</form>"
                     ."</div>";
         }
     }
