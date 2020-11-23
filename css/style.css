@@ -1,7 +1,8 @@
+/* --------------------------BACKGROUND----------------------------------------*/
+
 body {
     /*background: radial-gradient(circle at bottom, navy 0, #3B4F5E 100%);*/
-    background-color: #3B4F5E;
-    height: 100vh;
+    background-color: #05081B;
     overflow: hidden;
 }
 
@@ -48,7 +49,77 @@ body {
     z-index: -1;
 }
 
-h2 {
+
+/*-------------------------------------------NAV BAR--------------------------------------------------*/
+
+.topnav {
+    border-radius: 30px;
+    overflow: hidden;
+    width: 100%;
+    background-color: #03203E;
+}
+
+.topnav a {
+    float: left;
+    display: block;
+    color: #C6E3ED;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.topnav a:hover {
+    background-color: #42BCF3;
+    color: #05081B;
+}
+
+.topnav .search-container {
+    float: right;
+}
+
+.topnav input[type=text] {
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+}
+
+.topnav .search-container button {
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #C6E3ED;
+    border: none;
+    cursor: pointer;
+}
+
+.topnav button {
+    font-size: 17px;
+}
+
+.topnav .search-container button:hover {
+    background: #42BCF3;
+}
+
+.topnav form {
+    margin: 0;
+}
+
+.right {
+    float: right;
+}
+
+
+/* Styling for HomePage icon */
+
+@font-face {
+    font-family: 'maroon_boldregular';
+    src: url('MaroonBold.ttf');
+}
+
+.title {
     font-size: 50px;
     color: #1EB1C8;
     display: flex;
@@ -58,93 +129,8 @@ h2 {
     padding: 300px 0;
 }
 
-@font-face {
-    font-family: 'maroon_boldregular';
-    src: url('MaroonBold.ttf');
-}
 
-a {
-    text-decoration: none;
-}
-
-.rocket-position {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    top: 425px;
-    left: 625px;
-    position: fixed;
-    height: 125px;
-}
-
-
-/* .btn {
-    border: none;
-    background-color: inherit;
-    padding: 14px 28px;
-    font-size: 16px;
-    cursor: pointer;
-    display: inline-block;
-    position: fixed;
-    top: 425px;
-    left: 625px;
-}
-
-.btn:hover {
-    background: #eee;
-} */
-
-
-/*NAV BAR  */
-
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #666;
-}
-
-li {
-    float: left;
-}
-
-li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-
-/* Change the link color to #111 (black) on hover */
-
-li a:hover {
-    background-color: #111;
-}
-
-
-/*TODO Add custom font to it */
-
-.center-text {
-    text-align: center;
-}
-
-
-/* buttons stuff*/
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100%;
-    margin: 0 auto;
-    /*   padding: 2em 0em; */
-}
+/* button styling*/
 
 .container {
     align-items: center;
@@ -172,13 +158,6 @@ li a:hover {
     width: 100%;
 }
 
-.btn:hover {
-    text-decoration: none;
-}
-
-
-/*btn_background*/
-
 .effect01 {
     color: #FFF;
     border: 4px solid #000;
@@ -195,9 +174,6 @@ li a:hover {
     box-shadow: 0px 0px 0px 4px #EEE inset;
 }
 
-
-/*btn_text*/
-
 .effect01 span {
     transition: all 0.2s ease-out;
     z-index: 2;
@@ -207,9 +183,6 @@ li a:hover {
     letter-spacing: 0.13em;
     color: #333;
 }
-
-
-/*highlight*/
 
 .effect01:after {
     background: #FFF;
@@ -224,7 +197,6 @@ li a:hover {
     transform: rotate(35deg);
     width: 50px;
     transition: all 1s cubic-bezier(0.075, 0.82, 0.165, 1);
-    /*easeOutCirc*/
     z-index: 1;
 }
 
