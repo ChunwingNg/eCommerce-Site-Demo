@@ -18,6 +18,9 @@
     <link rel="stylesheet" type="text/css" href="../css/main.css">
     <link rel="stylesheet" type="text/css" href="../css/userPage.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    
+
 </head>
     
 <body>
@@ -35,6 +38,7 @@
         <button type="button"><a href="">Change Password</a></button>
     </div>
 
+
     <div id="address_form">
         <form action="addr-add.php" method="post" id="userpage">
             <!-- Address form -->
@@ -43,7 +47,43 @@
                 <!-- address input-->
                 <label class="control-label">Street Address</label>
                 <div class="controls">
-                    <input id="address-line" name="address-line" type="text" placeholder="Address line"
+                    <input id="address-line" name="address-line" type="text" placeholder="Address line"></div>
+    <h3>Address Book</h3>
+    
+    <?php foreach ($addresses as $address):?>
+    <div>
+        <p><?php echo $address['name'];?></p>
+        <p><?php echo $address['line1'];?></p>
+        <p><?php echo $address['line2'];?></p>
+        <p><?php echo $address['city'];?>, <?php echo $address['state'];?> <?php echo $address['zip'];?></p>
+        <form action="addr-delete.php" method="post">
+            <input type="hidden" name="addr_id" value=<?php echo $address['id'];?>>
+            <input type="submit" value="Delete Address">
+        </form>
+    </div>
+    <?php endforeach;?>
+
+    <a href="#" id="show-a-form">Add New Address</a>
+    <form action="addr-add.php" method="post" id="addr-form">
+        <!-- Address form -->
+            <h2>Address</h2>
+            <!-- address input-->
+            <label class="control-label">Street Address</label>
+            <div class="controls">
+                <input id="address-line" name="address-line" type="text" placeholder="Address line"
+                class="input-xlarge">
+                <p class="help-block"></p>
+            </div>
+            <!-- city input-->
+            <label class="control-label">City</label>
+            <div class="controls">
+                <input id="city" name="city" type="text" placeholder="City" class="input-xlarge">
+                <p class="help-block"></p>
+            </div>
+            <!-- state input-->
+            <label class="control-label">State</label>
+            <div class="controls">
+                    <input id="state" name="state" type="text" placeholder="State"
                     class="input-xlarge">
                     <p class="help-block"></p>
                 </div>
@@ -52,6 +92,7 @@
                 <div class="controls">
                     <input id="city" name="city" type="text" placeholder="City" class="input-xlarge">
                     <p class="help-block"></p>
+
                 </div>
                 <!-- state input-->
                 <label class="control-label">State</label>
@@ -70,6 +111,14 @@
                 <input type="submit" name="addr-add" value="Add New Address"></button>
             <br>
         </form>
+
+            </div>
+            <input type="submit" name="addr-add" value="Add New Address"></button>
+        <br>
+    </form>
+
+</div>
+
 
         <h3>Address Book</h3>
         
