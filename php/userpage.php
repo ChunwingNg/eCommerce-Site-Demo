@@ -17,6 +17,9 @@
     <title>User Info</title>
     <link rel="stylesheet" type="text/css" href="../css/userpage.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+    
+
 </head>
 
 <body>
@@ -33,7 +36,23 @@
 </div>
 
 <div>
-    <form action="addr-add.php" method="post" id="userpage">
+    <h3>Address Book</h3>
+    
+    <?php foreach ($addresses as $address):?>
+    <div>
+        <p><?php echo $address['name'];?></p>
+        <p><?php echo $address['line1'];?></p>
+        <p><?php echo $address['line2'];?></p>
+        <p><?php echo $address['city'];?>, <?php echo $address['state'];?> <?php echo $address['zip'];?></p>
+        <form action="addr-delete.php" method="post">
+            <input type="hidden" name="addr_id" value=<?php echo $address['id'];?>>
+            <input type="submit" value="Delete Address">
+        </form>
+    </div>
+    <?php endforeach;?>
+
+    <a href="#" id="show-a-form">Add New Address</a>
+    <form action="addr-add.php" method="post" id="addr-form">
         <!-- Address form -->
             <h2>Address</h2>
             <!-- address input-->
@@ -67,20 +86,6 @@
         <br>
     </form>
 
-    <h3>Address Book</h3>
-    
-    <?php foreach ($addresses as $address):?>
-    <div>
-        <p><?php echo $address['name'];?></p>
-        <p><?php echo $address['line1'];?></p>
-        <p><?php echo $address['line2'];?></p>
-        <p><?php echo $address['city'];?>, <?php echo $address['state'];?> <?php echo $address['zip'];?></p>
-        <form action="addr-delete.php" method="post">
-            <input type="hidden" name="addr_id" value=<?php echo $address['id'];?>>
-            <input type="submit" value="Delete Address">
-        </form>
-    </div>
-    <?php endforeach;?>
 </div>
 
 <div>

@@ -5,6 +5,7 @@
         session_start(); 
     } 
     require_once('database-connection.php');
+    require_once('shoppingcarticon.php');
 
     $cart_items = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
     $items = array();
@@ -27,6 +28,13 @@
         $_SESSION['total'] = $total;
     }
 ?>
+
+<div class="link-icons">
+     <a href="shoppingcart.php">
+        <i class="fas fa-shopping-cart"></i>
+        <span><?php echo$num_items_in_cart;?></span>
+	</a>
+</div>
 
 <div>
     <h1>Shopping Cart</h1>

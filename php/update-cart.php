@@ -3,7 +3,7 @@
     if(!isset($_SESSION)) 
     { 
         session_start(); 
-    }  
+    }
     require_once('database-connection.php');
 
     //Will add to the cart if it product id and quantity are specified
