@@ -80,11 +80,10 @@ body{
 }
 
 
-button{
+button {
     margin: 15px 0;
     width: 100%;
     height: 50px;
-    color: #3B4F5E;
     font-size: 18px;
     font-weight: 600;
     background: #dde1e2;
@@ -95,10 +94,18 @@ button{
     box-shadow: 2px 2px 5px #768998,
     -5px -5px 10px #ffffff73;
 }
+button a{
+    color: #3B4F5E;
+    text-decoration: none;
+}
 button:focus{
     color: #1EB1C8;
     box-shadow: inset 2px 2px 5px #768998,
     inset -5px -5px 10px #ffffff73;
+}
+
+button:hover{
+    text-decoration: underline;
 }
 
 .signup{
