@@ -1,6 +1,6 @@
 body {
     /*background: radial-gradient(circle at bottom, navy 0, #3B4F5E 100%);*/
-    background-color: #3B4F5E;
+    background-color: white;
     height: 100vh;
     overflow: hidden;
 }
@@ -87,4 +87,41 @@ a {
 
 .btn:hover {
     background: #eee;
+}
+
+
+/*Shit for NAV BAR  */
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #666;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+
+/* Change the link color to #111 (black) on hover */
+
+li a:hover {
+    background-color: #111;
+}
+
+
+/*TODO Add custom font to it */
+
+.center-text {
+    text-align: center;
 }
