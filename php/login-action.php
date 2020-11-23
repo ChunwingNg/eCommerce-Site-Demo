@@ -35,6 +35,7 @@ if(isset($_POST['login-action']))
 
         if($validPassword){
             $_SESSION['isLogged'] = 1;
+            $_SESSION['error'] = 0;
             $_SESSION['id'] = $login['id'];
             $_SESSION['email'] = $login['email'];
             $_SESSION['name'] = $login['userN'];

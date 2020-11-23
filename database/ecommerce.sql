@@ -65,8 +65,9 @@ DROP TABLE IF EXISTS `ecommerce`.`card` ;
 CREATE TABLE IF NOT EXISTS `ecommerce`.`card` (
   `id` INT(11) NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
-  `exp` DATE NOT NULL,
-  `number` INT(11) NOT NULL,
+  `expMonth` INT(2) NOT NULL,
+  `expYear` INT(2) NOT NULL,
+  `number` VARCHAR(45) NOT NULL,
   `cvv` INT(11) NOT NULL,
   `fk_card_user` INT(11) NOT NULL,
   PRIMARY KEY (`id`),
