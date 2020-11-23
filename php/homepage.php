@@ -12,26 +12,34 @@
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="../html/style.css">
-    <title>login</title>
+    <title>Welcome!</title>
 </head>
 
 <body>
 
-    <ul>
-        <li><a href="">Home</a></li>
-        <li><a href="">Cataloug</a></li>
-        <li><a href="userpage.php">User Info</a></li>
-        <li><a href="">About</a></li>
-    </ul>
+    
+    <div class="space stars1"></div>
+    <div class="space stars2"></div>
+    <div class="space stars3"></div>
+
+    <div>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="catalog.php">Catalog</a></li>
+            <li><a href="userpage.php">User Info</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
 
     <a href="#">
         <h2>Apollo 42 Express</h1>
     </a>
+    <div class="container">
+        <a href="#" class="btn effect01" target="_blank"><span>Blast Off!</span></a>
+    </div>
     <!---<img src="rocket-ship.png" alt="rocketship" class="rocket-position">--->
 
-    <div class="space stars1"></div>
-    <div class="space stars2"></div>
-    <div class="space stars3"></div>
+    <!-- <a href="#"> <button class="btn">click me to enter site</button> </a> -->    
 
 </body>
 

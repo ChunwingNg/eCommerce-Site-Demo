@@ -72,7 +72,6 @@
         <p><?php echo $address['line1'];?></p>
         <p><?php echo $address['line2'];?></p>
         <p><?php echo $address['city'];?>, <?php echo $address['state'];?> <?php echo $address['zip'];?></p>
-        <p><?php echo $address['phone'];?></p>
         <form action="addr-delete.php" method="post">
             <input type="hidden" name="addr_id" value=<?php echo $address['id'];?>>
             <input type="submit" value="Delete Address">
