@@ -85,11 +85,15 @@
     .topnav .search-container {
         float: right;
     }
+    .topnav .search-container .search_form input,.topnav .search-container .search_form button{
+        border: 1px solid black;
+        border-radius: 30px;
+    }
     
     .topnav input[type=text] {
         padding: 6px;
         margin-top: 8px;
-        font-size: 17px;
+        font-size: 15px;
         border: none;
     }
     
@@ -104,7 +108,7 @@
     }
     
     .topnav .search_b {
-        font-size: 23.5px;
+        font-size: 20px;
     }
     
     .topnav .search-container .search_b:hover {
@@ -244,6 +248,7 @@
         width: 100%;
         color: #42BCF3;
         height: 2.5rem;
+        border-radius: 30px;
     }
     
     .footer_text {
@@ -356,8 +361,9 @@
     
     .blue-colorizer {
         color: #42BCF3;
+        padding-top: 50px;
+
     }
-    
     .link-colors {
         color: #0593D3;
     }
@@ -372,7 +378,7 @@
         border: none;
         outline: none;
         cursor: pointer;
-        border-radius: 25px;
+        border-radius: 30px;
         box-shadow: 2px 2px 5px #768998, -5px -5px 10px #ffffff73;
     }
     
@@ -444,8 +450,60 @@
         margin-right: auto;
         width: 40%;
         margin-top: 75px;
+        /*background-color: #0592d33d;*/
+        /*border-radius: 10px;*/
+        /*box-shadow: -3px -3px 7px #768998, 2px 2px 5px rgba(94, 104, 121, 0.288);*/
+        padding: 25px 0px;
+    }
+
+     .field_checkout{
+        color: #42BCF3;
         background-color: #0592d33d;
         border-radius: 10px;
         box-shadow: -3px -3px 7px #768998, 2px 2px 5px rgba(94, 104, 121, 0.288);
-        padding: 25px 0px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+    }
+    .field_checkout h2{
+        padding-bottom: 15px;
+    }
+
+    .field_checkout label {
+          /*color: #42BCF3;*/
+        padding-top: 50px;
+    }
+    .field_checkout input{
+        border: 1px solid black;
+        border-radius: 30px;
+        padding: 5px 0px;
+        box-shadow: 2px 2px 10px #768998, -1px -1px 5px #ffffff73;
+      }
+
+    .field_checkout select{
+        width: 20%;
+        border-radius: 30px;
+        padding: 3px 0px;
+        box-shadow: 2px 2px 10px #768998, -1px -1px 5px #ffffff73;
+    }
+
+    .field_checkout button{
+        border-radius: 30px;
+        width: 20%;
+        margin: 0px 30px 0px 30px; 
+        padding: 5px 0px;
+        color: #3B4F5E;
+        box-shadow: 2px 2px 10px #768998, -1px -1px 5px #ffffff73;
+
+    }
+    .checkout_add{
+        color: #0593D3;
+        text-decoration: none;
+        border-radius: 30px;
+        width: 100px;
+        padding: 5px 5px;
+        background-color: white;
+        color: #3B4F5E;
+        box-shadow: 2px 2px 10px #768998, -1px -1px 5px #ffffff73;
     }

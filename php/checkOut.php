@@ -23,7 +23,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../css/form.css"> -->
     <link rel="stylesheet" type="text/css" href="../css/style.css">
     <title>check out</title>
 </head>
@@ -31,22 +31,30 @@
 <?php require_once('base.php');?>
 
 <body>
-<div class="spacer">.</div>
+<!-- <div class="spacer">.</div> -->
 <main>
     <form action="create-order.php" method="post" id="make_order" class="center-checkout">
-        <fieldset>
-            <legend><h2>Customer info</h2></legend>
+        <!-- <fieldset> -->
+        <!-- <legend><h1>Customer info</h1></legend> -->
+        <div class="field_checkout">
+        <h2>Customer info</h2>
             <!-- part 1 -->
             <label for="first_name" class = "blue-colorizer">First Name:</label>
-            <input type="text" name="first_name" placeholder="First Name" required>
+            <input type="text" name="first_name" placeholder="First Name"  required>
+            
+            <br>
             <br>
             <label for="last_name" class = "blue-colorizer">Last Name:</label>
             <input type="text" name="last_name" placeholder="Last Name">
+        </div>
             <br>
+        <!-- </fieldset> -->
 
+        <!-- <fieldset> -->
+        <div class="field_checkout">
             <!-- part 2 address include: street, city, state, zip-->
-            <label for="ship_address" class="blue-colorizer">Shipping Address:</label>
-            <br>
+            <label for="ship_address" class="blue-colorizer"><h2>Shipping Address</h2></label>
+
 
             <label for="stored-addr"class="blue-colorizer">Saved Address: </label>
             <select name="address_id">
@@ -58,15 +66,21 @@
             <?php endforeach;?>
             </select>
             <br>
-            <a href="address-form.php" class ="link-colors">Add New Address</a>
-        </fieldset>
+            <br>
+            <br>
+            <a href="address-form.php" class ="checkout_add">Add New Address</a>
+        </div>
+        <!-- </fieldset> -->
         <br>
+        
 
-        <fieldset>
+        <!-- <fieldset> -->
+            <div class="field_checkout">
             <!-- part 3, credit or debit info -->
-            <legend class = "blue-colorizer">Payment</legend>
+            <!-- <legend class = "blue-colorizer"><h1>Payment<h1></legend> -->
             <!-- choice of credit or debit -->
-
+        
+            <h2>Payment</h2>
             <select name="card">
             <?php foreach ($cards as $card):?>
                 <option value=<?php echo $card['id'];?>>
@@ -75,18 +89,28 @@
             <?php endforeach;?>
             </select>
             <br>
-            <a href="card-form.php" class ="link-colors">Add New Card</a>
-            
-        </fieldset>
+            <br>
+            <br>
+            <a href="card-form.php" class ="checkout_add">Add New Card</a>
+        
         <br>
+
+    
+
 
         <?php foreach ($items as $item): ?>
             <input type="hidden" name="quantity-<?=$item['id']?>" value="<?=$cart_items[$item['id']]?>">
         <?php endforeach; ?>
 
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
+</div>
+<br>
 
+<!-- </fieldset> -->
+
+        <div class="field_checkout">
+        <button type="submit" >Submit</button>
+        <button type="reset" >Reset</button>
+    </div>
     </form>
 
 </main>

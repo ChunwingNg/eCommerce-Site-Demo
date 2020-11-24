@@ -53,7 +53,7 @@
     ?>
 
     <div class="search-container">
-        <form action="catalog.php" method="post">
+        <form action="catalog.php" method="post" class="search_form">
             <input type="text" placeholder="Search.." name="search">
             <button type="submit" name="catalog-search" class="search_b"><i class="fa fa-search"></i></button>
         </form>
