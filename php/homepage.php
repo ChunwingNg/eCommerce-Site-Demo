@@ -16,7 +16,7 @@
         <div>
             <div class="left-c">
                 <h1 class="title top_space">Apollo 42 Express</h1>
-                <img src="../img/rocket-ship.png"  class="logo">
+                <img src="../img/rocket-ship.png"  width="350" height="350" class="logo">
                 <!-- height="400" width="400" -->
             </div>
             <div class="right-c">
