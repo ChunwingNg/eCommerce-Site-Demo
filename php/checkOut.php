@@ -73,8 +73,12 @@
                     <p>**** **** **** <?php echo substr ($card['number'], -4);?></p> 
                 </option>
             <?php endforeach;?>
+            </select>
+            <br>
+            <a href="card-form.php" class ="link-colors">Add New Card</a>
             
         </fieldset>
+        <br>
 
         <?php foreach ($items as $item): ?>
             <input type="hidden" name="quantity-<?=$item['id']?>" value="<?=$cart_items[$item['id']]?>">
