@@ -290,3 +290,39 @@ h1 {
     margin-top: 80px;
     padding-bottom: 50px;
 }
+
+.blue-colorizer {
+    color: #42BCF3;
+}
+
+.link-colors {
+    color: #0593D3;
+}
+
+.submit_b2 {
+    margin: 15px 0;
+    width: 50%;
+    height: 50px;
+    font-size: 18px;
+    font-weight: 600;
+    background: #dde1e2;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 25px;
+    box-shadow: 2px 2px 5px #768998, -5px -5px 10px #ffffff73;
+}
+
+.submit_b2 a {
+    color: #3B4F5E;
+    text-decoration: none;
+}
+
+.submit_b2:focus {
+    color: #1EB1C8;
+    box-shadow: inset 2px 2px 5px #768998, inset -5px -5px 10px #ffffff73;
+}
+
+.submit_b2:hover {
+    text-decoration: underline;
+}
