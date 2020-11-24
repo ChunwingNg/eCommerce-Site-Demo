@@ -13,6 +13,10 @@
 
     $addresses = $db->query("SELECT * FROM address WHERE fk_address_user=$_SESSION[id]");
     $cards = $db->query("SELECT * FROM card WHERE fk_card_user=$_SESSION[id]");
+
+
+    $cart_items = $_SESSION['cart_items'];
+    $items = $_SESSION['cart-list'];
 ?>
 
 <!DOCTYPE html>
@@ -29,10 +33,10 @@
 <main>
     <form action="create-order.php" method="post" id="make_order">
         <fieldset>
-            <legend>Customer info</legend>
+            <legend><h2>Customer info</h2></legend>
             <!-- part 1 -->
             <label for="first_name">First Name:</label>
-            <input type="text" name="first_name" placeholder="First Name">
+            <input type="text" name="first_name" placeholder="First Name" required>
             <br>
             <label for="last_name">Last Name:</label>
             <input type="text" name="last_name" placeholder="Last Name">
@@ -67,8 +71,12 @@
                     <p>**** **** **** <?php echo substr ($card['number'], -4);?></p> 
                 </option>
             <?php endforeach;?>
+                <input type="hidden" name="quantity-<?=$item['id']?>" value="<?=$cart_items[$item['id']]?>">
+            <?php endforeach; ?>
             
         </fieldset>
+
+        <?php foreach ($items as $item): ?>
 
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>

@@ -35,7 +35,7 @@
         </div>
         <label class="control-label">Price</label>
         <div class="controls">
-            <input id="price" name="price" type="number" placeholder="20000.29">
+            <input id="price" name="price" type="number"  step="0.01" placeholder="20000.29">
             <p class="help-block"></p>
         </div>
         <label class="control-label">Quantity</label>
