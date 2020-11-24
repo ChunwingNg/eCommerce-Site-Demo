@@ -55,11 +55,11 @@ var checkCP = function() {
     if (text.localeCompare(text2) == 0) {
         $("side3").textContent = "";
         $("newC").style.boxShadow = "2px 2px 5px #768998 inset";
-        passWC = true;
+        newPC = true;
     } else {
         $("side3").textContent = "Passwords do not match";
         $("newC").style.boxShadow = "2px 2px 5px red inset";
-        passWC = false;
+        newPC = false;
     }
     submitCheck();
 }

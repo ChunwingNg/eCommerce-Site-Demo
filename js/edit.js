@@ -12,7 +12,7 @@ var checkP = function() {
     if (text.length == 0) {
         $("side2").textContent = "This field cannot be left empty";
         $("pass").style.boxShadow = "2px 2px 5px red inset";
-        userN = false;
+        passW = false;
     } else {
         $("side2").textContent = "";
         $("pass").style.boxShadow = "2px 2px 5px #768998 inset";

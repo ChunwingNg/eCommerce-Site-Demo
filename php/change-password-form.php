@@ -57,7 +57,7 @@
         </div>
         <br>
         <div class="field">
-            <button type="submit" name="password-change" value="Change Password" class="submit_b">Change Password</button>
+            <button id='submit' type="submit" name="password-change" value="Change Password" class="submit_b" disabled>Change Password</button>
         </div>
     </form>
 </main>
