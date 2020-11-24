@@ -32,7 +32,7 @@
 </head>
     
 <body>
-    <form action="addr-add.php" method="post" id="adress-form">
+    <form action="card-add.php" method="post" id="adress-form">
         <!--name on card input-->
         <label class="control-label">Full Name</label>
         <div class="controls">
@@ -45,6 +45,12 @@
             <input id="number" name="number" type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
             <p class="help-block"></p>
         </div>
+        <!-- card cvv input-->
+        <label class="control-label">CVV</label>
+        <div class="controls">
+            <input id="cvv" name="cvv" type="text" placeholder="123">
+            <p class="help-block"></p>
+        </div>
         <!-- expiration date input-->
         <label class="control-label">Expiration Date</label>
         <div class="controls">
@@ -52,7 +58,7 @@
             <p class="help-block"></p>
         </div>
         <div>
-            <button type="submit" name="login-action" value="Login" class="btn btn1">Add Address</button>
+            <button type="submit" name="card-add" value="Login" class="btn btn1">Add Card</button>
         </div>
     </form>
 </body>

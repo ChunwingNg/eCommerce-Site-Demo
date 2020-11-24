@@ -3,7 +3,7 @@
 ?>
 
 <body>
-
+    <div class="spacer">.</div>
     <div class="content-main">
         <h1>OOPS! You weren't supposed to do that.</h1>
     </div>
