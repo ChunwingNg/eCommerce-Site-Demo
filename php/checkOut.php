@@ -31,6 +31,7 @@
 <?php require_once('base.php');?>
 
 <body>
+<div class="spacer">.</div>
 <!-- <div class="spacer">.</div> -->
 <main>
     <form action="create-order.php" method="post" id="make_order" class="center-checkout">
@@ -40,12 +41,12 @@
         <h2>Customer info</h2>
             <!-- part 1 -->
             <label for="first_name" class = "blue-colorizer">First Name:</label>
-            <input type="text" name="first_name" placeholder="First Name"  required>
+            <input type="text" name="first_name" placeholder="    First Name"  required>
             
             <br>
             <br>
             <label for="last_name" class = "blue-colorizer">Last Name:</label>
-            <input type="text" name="last_name" placeholder="Last Name">
+            <input type="text" name="last_name" placeholder="    Last Name">
         </div>
             <br>
         <!-- </fieldset> -->
