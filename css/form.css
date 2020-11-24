@@ -1,3 +1,7 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .content {
     width: 330px;
     background: #dde1e2;
