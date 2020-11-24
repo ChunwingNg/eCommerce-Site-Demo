@@ -83,9 +83,21 @@ var checkEx = function() {
         $("expiration").style.boxShadow = "2px 2px 5px red inset";
         exp = false;
     } else if (!isNaN(text.substring(0, 2)) && !isNaN(text.substring(3)) && text.indexOf('/') == 2) {
-        $("side4").textContent = "";
-        $("expiration").style.boxShadow = "2px 2px 5px #768998 inset";
-        exp = true;
+        $yr = parseInt(text.substring(3));
+        $mn = parseInt(text.substring(0, 2));
+        if ($yr > 20 && $mn > 0 && $mn < 13) {
+            $("side4").textContent = "";
+            $("expiration").style.boxShadow = "2px 2px 5px #768998 inset";
+            exp = true;
+        } else if ($yr == 20 && $mn > 11 && $mn < 13) {
+            $("side4").textContent = "";
+            $("expiration").style.boxShadow = "2px 2px 5px #768998 inset";
+            exp = true;
+        } else {
+            $("side4").textContent = "Expiration not valid";
+            $("expiration").style.boxShadow = "2px 2px 5px red inset";
+            exp = false;
+        }
     } else {
         $("side4").textContent = "Expiration needs to be this format ##/##";
         $("expiration").style.boxShadow = "2px 2px 5px red inset";
