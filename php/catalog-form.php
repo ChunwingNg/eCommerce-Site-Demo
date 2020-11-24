@@ -10,7 +10,7 @@
     {
         ?>
         <script>
-            alert("Error: Please make sure to fill in all card information fields correctly");
+            alert("Error: Please make sure to fill in all information fields correctly");
         </script>
         <?php
         $_SESSION['error'] = 0;

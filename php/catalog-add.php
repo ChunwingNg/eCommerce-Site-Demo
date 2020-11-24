@@ -3,11 +3,11 @@
     require_once('database-connection.php');
 
 
-    $name = filter_input(INPUT_POST, 'address-line1');
-    $price = filter_input(INPUT_POST, 'address-line2');
-    $quantity = filter_input(INPUT_POST, 'city');
-    $desc = filter_input(INPUT_POST, 'state');
-    $link = filter_input(INPUT_POST, 'postal-code');
+    $name = $_POST['name'];
+    $price = $_POST['price'];
+    $quantity = $_POST['quantity'];
+    $desc = $_POST['desc'];
+    $link = $_POST['img_link'];
 
     if ($street == null || $unit == null || $city == null || $state == null || $zip == null || $userId == null) 
     {
