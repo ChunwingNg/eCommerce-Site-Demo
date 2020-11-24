@@ -1,5 +1,10 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
+
+$_SESSION['error'] = 0;
 
 if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] == 0){
     header("Location: login.php");
@@ -54,5 +59,9 @@ require_once('database-connection.php');
             $_SESSION['name'] = $newUser;
             }
         header("Location: userpage.php");
+    }
+    else{
+        $_SESSION['error'] = 1;
+        header("Location: user-edit-form.php");
     }
 ?>
