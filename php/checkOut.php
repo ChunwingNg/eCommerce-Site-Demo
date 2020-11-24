@@ -20,14 +20,12 @@
 <head>
     <meta charset="utf-8">
     <title>check out</title>
-    <link rel="stylesheet" type="text/css" href="../css/checkOut.css">
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
 </head>
+
+<?php require_once('base.php');?>
+
 <body>
-<header>
-    <img src="../img/background.jpg" alt="galaxy">
-    <a href="#" id="title">Apollo 42 Express</a>
-</header>
+<div class="spacer">.</div>
 <main>
     <form action="create-order.php" method="post" id="make_order">
         <fieldset>
@@ -78,10 +76,6 @@
     </form>
 
 </main>
-
-
-<footer>
-
-</footer>
+<?=template_footer()?>
 </body>
 </html>
