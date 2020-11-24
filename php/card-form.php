@@ -36,7 +36,7 @@
     <title>Add Card</title>
     <link rel="stylesheet" type="text/css" href="../css/form.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <script src="../js/validation.js"></script>
+    <script src="../js/card.js"></script>
 </head>
     
 <body>
@@ -45,31 +45,31 @@
 <header><h1>Add Card Information</h1></header>
     <form action="card-add.php" method="post" id="card-form">
         <!--name on card input-->
-        <label class="control-label">Full Name</label>
         <div class="field">
-            <input id="name" name="name" type="text" placeholder="John A. Smith" required>
-            <p class="help-block"></p>
+            <input id="name" name="name" type="text" placeholder="Full Name" required>
+            <div class="error" id="side1"></div>
         </div>
+        <br>
         <!-- card number input-->
-        <label class="control-label">Card Number</label>
         <div class="field">
-            <input id="number" name="number" type="text" placeholder="XXXX-XXXX-XXXX-XXXX" required>
-            <p class="help-block"></p>
+            <input id="number" name="number" type="text" placeholder="Card Number" required minlength="16" maxlength="16">
+            <div class="error" id="side2"></div>
         </div>
+        <br>
         <!-- card cvv input-->
-        <label class="control-label">CVV</label>
         <div class="field">
-            <input id="cvv" name="cvv" type="text" placeholder="123" required minlength="3" maxlength="3">
-            <span class="error" aria-live="polite"></span>
+            <input id="cvv" name="cvv" type="text" placeholder="CVV" required minlength="3" maxlength="4">
+            <div class="error" id="side3"></div>
         </div>
+        <br>
         <!-- expiration date input-->
-        <label class="control-label">Expiration Date</label>
         <div class="field">
-            <input id="expiration" name="expiration" type="text" placeholder="1224" required minlength="4" maxlength="4">
-            <p class="help-block"></p>
+            <input id="expiration" name="expiration" type="text" placeholder="Expiration date: 12/24" required minlength="5" maxlength="5">
+            <div class="error" id="side4"></div>
         </div>
+        <br>
         <div class="field">
-            <button type="submit" name="card-add" value="Login" class="submit_b" >Add Card</button>
+            <button id="submit" type="submit" name="card-add" value="Login" class="submit_b" disabled>Add Card</button>
         </div>
     </form>
 </body>
