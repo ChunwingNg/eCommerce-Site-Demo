@@ -43,7 +43,7 @@
         <p class="blue-colorizer">Username: <?php echo $_SESSION['name']; ?></p>
         <p class="blue-colorizer">Email: <?php echo $_SESSION['email']; ?></p>
         <br>
-        <button type="button" class="submit_b2"><a href="">Edit Account Info</a></button>
+        <button type="button" class="submit_b2"><a href="user-edit-form.php">Edit Account Info</a></button>
         <br>
         <button type="button" class="submit_b2"><a href="change-password-form.php">Change Password</a></button>
     </div>
