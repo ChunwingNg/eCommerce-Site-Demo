@@ -25,6 +25,7 @@
     include('base.php');
 ?>
 <body>
+<div class="spacer">.</div>
 <div class="content">
 <header><h1>Login</h1></header>
 <main>

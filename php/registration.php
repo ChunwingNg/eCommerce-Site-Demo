@@ -18,6 +18,7 @@
 ?>
 
 <body>
+<div class="spacer">.</div>
 <div class="content">
 
     <header><h1>Sign Up</h1></header>

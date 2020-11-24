@@ -12,9 +12,9 @@
 
 
     <body>
-        <div id="content">
+        <div>
             <div class="left-c">
-                <h1 class="title">Apollo 42 Express</h1>
+                <h1 class="title top_space">Apollo 42 Express</h1>
                 <img src="../img/rocket-ship.png" height="400" width="400" class="logo">
             </div>
             <div class="right-c">
@@ -25,7 +25,6 @@
             </div>
         </div>
         <br>
-
         <?=template_footer()?>
     </body>
 

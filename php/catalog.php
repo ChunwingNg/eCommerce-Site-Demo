@@ -23,24 +23,30 @@
 <head>
 </head>
 
-<body>
+<?php require_once('base.php');?>
 
-    <?php require_once('base.php');?>
-    
-    <div class="catalog_content">
-        <h1 class="title">Catalog</h1>
+<body>
+    <div class="spacer">.</div>
+    <div class="content-main">
+        <h1 class="title center">Catalog</h1>
         <?php
 
 
         if($items->rowCount() == 0){
             if($posted == 1){
-                echo "<h2>Sorry, we did not find anything matching your search.</h2>";
+                echo "<h1>Sorry, we did not find anything matching your search.</h1>";
             }
             else{
-                echo "<h2>Sorry, we do not have anything for sale yet.</h2>";
+                echo "<h1>Sorry, we do not have anything for sale yet.</h1>";
             }
         }
         else{
+            echo "<tr>
+                    <th colspan="2">Product</td>
+                    <th>Price</td>
+                    <th>Availability</td>
+                    <th></td>
+                </tr>"
             foreach ($items as $item){
                 echo "<div class='product'>"
                         ."<h3>" . $item['name'] . "</h3>"
@@ -70,4 +76,5 @@
 
         ?>
     </div>
+    <?=template_footer()?>
 </body>

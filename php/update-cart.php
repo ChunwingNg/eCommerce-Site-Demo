@@ -56,7 +56,13 @@
     }
 
     if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-        header('Location: checkOut.php');
-        exit;
+        $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
+        if($num_items_in_cart== 0){
+
+        }
+        else{
+            header('Location: checkOut.php');
+            exit;
+        }
     }
 ?>
