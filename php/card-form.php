@@ -30,6 +30,7 @@
 </head>
     
 <body>
+<div class="spacer">.</div>
 <div class="content">
 <header><h1>Add Address</h1></header>
     <form action="card-add.php" method="post" id="adress-form">
