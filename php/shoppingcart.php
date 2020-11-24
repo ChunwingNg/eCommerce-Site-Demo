@@ -28,6 +28,10 @@
     }
 ?>
 
+<?php
+    include('base.php');
+?>
+
 <div>
     <h1>Shopping Cart</h1>
     <form action="update-cart.php" method="post">
