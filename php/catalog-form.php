@@ -56,8 +56,8 @@
             <input id="img_link" name="img_link" type="text" placeholder="Image Link">
         </div>
         <br>
-        <div>
-            <button type="submit" name="catalog-add">Add Catalog Item</button>
+        <div class="field">
+            <button type="submit" name="catalog-add" class="submit_b">Add Catalog Item</button>
         </div>
     </form>
     </div>
