@@ -15,21 +15,26 @@
     $orders = $db->query("SELECT * FROM orders WHERE fk_orders_user=$_SESSION[id]");
 ?>
 
+<?php
+    include('base.php');
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Info</title>
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/userPage.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
     
 <body>
 
 
-    <h1>Account Overview</h1>
+    <h1 class = "account-header">Account Overview</h1>
 
 <!-- contact info -->
     <div id="contact_info">
@@ -38,9 +43,9 @@
         <p>Username: <?php echo $_SESSION['name']; ?></p>
         <p>Email: <?php echo $_SESSION['email']; ?></p>
         <br>
-        <button type="button" ><a href="">Edit</a></button>
+        <button type="button" class="submit_b"><a href="">Edit</a></button>
         <br>
-        <button type="button"><a href="">Change Password</a></button>
+        <button type="button" class="submit_b"><a href="">Change Password</a></button>
     </div>
 
 
@@ -64,13 +69,14 @@
 
         <div>
             <h3>Payment Information</h3>
-
             <?php foreach ($cards as $card):?>
+                <div>
                 <p>**** **** **** <?php echo substr ($card['number'], -4);?></p>
-                <form action="del_card.php" method="post">
+                <form action="card-delete.php" method="post">
                     <input type="hidden" name="card_id" value=<?php echo $card['id'];?>>
                     <input type="submit" value="Delete Card">
                 </form>
+                </div>
             <?php endforeach;?>
 
             <a href="card-form.php">Add New Card</a>

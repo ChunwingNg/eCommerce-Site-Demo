@@ -2,12 +2,12 @@
 session_start();
 require_once('database-connection.php');
 
-$card = filter_input(INPUT_POST, 'card_id', FILTER_VALIDATE_INT);
+$cardId = filter_input(INPUT_POST, 'card_id', FILTER_VALIDATE_INT);
 
-if($address != false){
-    $query = 'DELETE FROM card WHERE id = :card';
+if($cardId != false){
+    $query = 'DELETE FROM card WHERE id = :cardId';
     $statement = $db->prepare($query);
-    $statement->bindValue(':card', $card);
+    $statement->bindValue(':cardId', $cardId);
     $success= $statement->execute();
     $statement->closeCursor();
 }

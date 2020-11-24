@@ -7,7 +7,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-    <link rel="stylesheet" type="text/css" href="../css/login.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
     <script src="https://kit.fontawesome.com/5c49374a2a.js" crossorigin="anonymous"></script>
 
 </head>
