@@ -43,7 +43,7 @@
 <body>
 <div class="spacer">.</div>
     <div class="content-main">
-        <h1 class="title center">Shopping Cart</h1>
+        <h1 class="title center bot_space">Shopping Cart</h1>
         <form action="update-cart.php" method="post">
             <table class='cart_table'>
                 <thead>

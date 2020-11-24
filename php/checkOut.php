@@ -23,6 +23,8 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
     <title>check out</title>
 </head>
 
@@ -31,22 +33,22 @@
 <body>
 <div class="spacer">.</div>
 <main>
-    <form action="create-order.php" method="post" id="make_order">
+    <form action="create-order.php" method="post" id="make_order" class="center-checkout">
         <fieldset>
             <legend><h2>Customer info</h2></legend>
             <!-- part 1 -->
-            <label for="first_name">First Name:</label>
+            <label for="first_name" class = "blue-colorizer">First Name:</label>
             <input type="text" name="first_name" placeholder="First Name" required>
             <br>
-            <label for="last_name">Last Name:</label>
+            <label for="last_name" class = "blue-colorizer">Last Name:</label>
             <input type="text" name="last_name" placeholder="Last Name">
             <br>
 
             <!-- part 2 address include: street, city, state, zip-->
-            <label for="ship_address">Shipping Address:</label>
+            <label for="ship_address" class="blue-colorizer">Shipping Address:</label>
             <br>
 
-            <label for="stored-addr">Saved Address: </label>
+            <label for="stored-addr"class="blue-colorizer">Saved Address: </label>
             <select name="address_id">
             <?php foreach ($addresses as $address):?>
                 <option value=<?php echo $address['id'];?>>
@@ -56,13 +58,13 @@
             <?php endforeach;?>
             </select>
             <br>
-            <a href="address-form.php">Add New Address</a>
+            <a href="address-form.php" class ="link-colors">Add New Address</a>
         </fieldset>
         <br>
 
         <fieldset>
             <!-- part 3, credit or debit info -->
-            <legend>Payment</legend>
+            <legend class = "blue-colorizer">Payment</legend>
             <!-- choice of credit or debit -->
 
             <select name="card">

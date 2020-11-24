@@ -62,10 +62,18 @@
             <h4><?php echo $address['line2'];?></h4>
             <h4><?php echo $address['city'];?>, <?php echo $address['state'];?> <?php echo $address['zip'];?></h4>
         </td>
-        <td><form action="addr-delete.php" method="post">
-                <input type="hidden" name="addr_id" value=<?php echo $address['id'];?>>
-                <input type="submit" value="Delete Address">
-            </form></td>
+        <td>
+        <?php
+            $exist = $db->query("SELECT * FROM orders WHERE fk_orders_address={$address['id']}");    
+            if($exist->rowCount() == 0){
+                echo
+                "<form action='addr-delete.php' method='post'>
+                <input type='hidden' name='addr_id' value='". $address['id']."'>
+                <input type='submit' value='Delete Address'>
+                </form>>>";
+            }
+            ?>
+        </td>
         </tr>
         <?php endforeach;?>
         </table>
@@ -82,10 +90,15 @@
                 <h4>**** **** **** <?php echo substr ($card['number'], -4);?></h4>
                 </td>
                 <td>
-                <form action="card-delete.php" method="post">
-                    <input type="hidden" name="card_id" value=<?php echo $card['id'];?>>
-                    <input type="submit" value="Delete Card">
-                </form>
+                <?php
+                    $exist = $db->query("SELECT * FROM orders WHERE fk_orders_card={$card['id']}");    
+                     if($exist->rowCount() == 0){
+                        echo "<form action='card-delete.php' method='post'>
+                            <input type='hidden' name='card_id' value='".$card['id']."'>
+                            <input type='submit' value='Delete Card'>
+                        </form>";
+                     }?>
+                </td>
             <?php endforeach;?>
             </table>
             <button type="button" class="submit_b2"><a href="card-form.php">Add New Card</a></button> 
