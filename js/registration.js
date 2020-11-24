@@ -33,6 +33,10 @@ var checkP = function() {
         $("side2").textContent = "This field cannot be left empty";
         $("pass").style.boxShadow = "2px 2px 5px red inset";
         userN = false;
+    } else if (text.length > 25 || text.length < 6) {
+        $("side2").textContent = "Password needs to be between 6 to 25 characters";
+        $("pass").style.boxShadow = "2px 2px 5px red inset";
+        passW = false;
     } else if (!regex.test(text)) {
         $("side2").textContent = "Password requires at least one special character";
         $("pass").style.boxShadow = "2px 2px 5px red inset";

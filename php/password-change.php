@@ -8,6 +8,7 @@ if(isset($_POST['password-change']))
     $newPass = filter_input(INPUT_POST, 'newPass');
     $newPassConfirm = filter_input(INPUT_POST, 'newPassConfirm');
     $userId = $_SESSION['id'];
+    $_SESSION['error'] = 0;
 
 
     if ($current == null || $newPass == null || $newPassConfirm == null) 
@@ -64,6 +65,8 @@ if(isset($_POST['password-change']))
                 alert("Error: Please make sure to fill in all registration data.")
             </script>
             <?php
+
+            $_SESSION['error'] = 1;
     
             header("Location: change-password-form.php");
         }
