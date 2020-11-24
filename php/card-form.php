@@ -15,15 +15,7 @@
     $cards = $db->query("SELECT * FROM card WHERE fk_card_user=$_SESSION[id]");
     $orders = $db->query("SELECT * FROM orders WHERE fk_orders_user=$_SESSION[id]");
 
-    if($_SESSION['error'] == 1)
-    {
-        ?>
-        <script>
-            alert("Error: Please make sure to fill in all card information fields correctly");
-        </script>
-        <?php
-        $_SESSION['error'] = 0;
-    }
+    include('base.php');
 
 ?>
 
@@ -32,38 +24,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card Form</title>
-    <link rel="stylesheet" type="text/css" href="../css/for.css">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
     
 <body>
+<div class="content">
+<header><h1>Add Address</h1></header>
     <form action="card-add.php" method="post" id="adress-form">
         <!--name on card input-->
         <label class="control-label">Full Name</label>
-        <div class="controls">
-            <input id="name" name="name" type="text" placeholder="John A. Smith">
+        <div class="field">
+            <input id="name" name="name" type="text" placeholder="John A. Smith" required>
             <p class="help-block"></p>
         </div>
         <!-- card number input-->
         <label class="control-label">Card Number</label>
-        <div class="controls">
-            <input id="number" name="number" type="text" placeholder="XXXX-XXXX-XXXX-XXXX">
+        <div class="field">
+            <input id="number" name="number" type="text" placeholder="XXXX-XXXX-XXXX-XXXX" required>
             <p class="help-block"></p>
         </div>
         <!-- card cvv input-->
         <label class="control-label">CVV</label>
-        <div class="controls">
-            <input id="cvv" name="cvv" type="text" placeholder="123">
+        <div class="field">
+            <input id="cvv" name="cvv" type="text" placeholder="123" required>
             <p class="help-block"></p>
         </div>
         <!-- expiration date input-->
         <label class="control-label">Expiration Date</label>
-        <div class="controls">
-            <input id="expiration" name="expiration" type="text" placeholder="12/24">
+        <div class="field">
+            <input id="expiration" name="expiration" type="text" placeholder="12/24" required>
             <p class="help-block"></p>
         </div>
-        <div>
-            <button type="submit" name="card-add" value="Login" class="btn btn1">Add Card</button>
+        <div class="field">
+            <button type="submit" name="card-add" value="Login" class="submit_b">Add Card</button>
         </div>
     </form>
 </body>

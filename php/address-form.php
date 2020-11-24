@@ -15,15 +15,7 @@
     $cards = $db->query("SELECT * FROM card WHERE fk_card_user=$_SESSION[id]");
     $orders = $db->query("SELECT * FROM orders WHERE fk_orders_user=$_SESSION[id]");
 
-    if($_SESSION['error'] == 1)
-    {
-        ?>
-        <script>
-            alert("Error: Please make sure to fill in all address fields correctly");
-        </script>
-        <?php
-        $_SESSION['error'] = 0;
-    }
+    include('base.php');
 
 ?>
 
@@ -32,44 +24,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Address Form</title>
+    <title>Add Address</title>
     <link rel="stylesheet" type="text/css" href="../css/form.css">
 </head>
+
 <body>
+<div class="content">
+<header><h1>Add Address</h1></header>
+<main>
     <form action="addr-add.php" method="post" id="adress-form">
         <!-- address-line1 input-->
         <label class="control-label">Address Line 1</label>
-        <div class="controls">
-            <input id="address-line1" name="address-line1" type="text" placeholder="Street Address">
+        <div class="field">
+            <input id="address-line1" name="address-line1" type="text" placeholder="Street Address" required>
             <p class="help-block"></p>
         </div>
         <!-- address-line2 input-->
         <label class="control-label">Address Line 2</label>
-        <div class="controls">
+        <div class="field">
             <input id="address-line2" name="address-line2" type="text" placeholder="Apt number, unit, building">
             <p class="help-block"></p>
         </div>
         <!-- city input-->
         <label class="control-label">City</label>
-        <div class="controls">
-            <input id="city" name="city" type="text" placeholder="City">
+        <div class="field">
+            <input id="city" name="city" type="text" placeholder="City" required>
             <p class="help-block"></p>
         </div>
         <!-- region input-->
         <label class="control-label">State</label>
-        <div class="controls">
-            <input id="state" name="state" type="text" placeholder="GA">
+        <div class="field">
+            <input id="state" name="state" type="text" placeholder="GA" required>
             <p class="help-block"></p>
         </div>
         <!-- postal-code input-->
         <label class="control-label">Zip / Postal Code</label>
-        <div class="controls">
-            <input id="postal-code" name="postal-code" type="text" placeholder="zip or postal code">
+        <div class="field">
+            <input id="postal-code" name="postal-code" type="text" placeholder="Zip or postal code" required>
             <p class="help-block"></p>
         </div>
-        <div>
-            <button type="submit" name="login-action" value="Login" class="btn btn1">Add Address</button>
+        <div class="field">
+            <button type="submit" name="login-action" value="Address" class="submit_b">Add Address</button>
         </div>
     </form>
+</main>
 </body>
 </html>
