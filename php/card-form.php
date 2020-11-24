@@ -72,5 +72,6 @@
             <button id="submit" type="submit" name="card-add" value="Login" class="submit_b" disabled>Add Card</button>
         </div>
     </form>
+    </div>
 </body>
 </html>
