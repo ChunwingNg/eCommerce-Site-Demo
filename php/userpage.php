@@ -40,12 +40,18 @@
     <div class="left-c">
         <h2 class="blue-colorizer" >Contact Information</h2>
         <br>
-        <p class="blue-colorizer">Username: <?php echo $_SESSION['name']; ?></p>
-        <p class="blue-colorizer">Email: <?php echo $_SESSION['email']; ?></p>
+        <br>
+        <h2>Username: <?php echo $_SESSION['name']; ?></h2>
+        <br>
+        <br>
+        <h2>Email: <?php echo $_SESSION['email']; ?></h2>
+        <br>
         <br>
         <button type="button" class="submit_b2"><a href="user-edit-form.php">Edit Account Info</a></button>
         <br>
+        <br>
         <button type="button" class="submit_b2"><a href="change-password-form.php">Change Password</a></button>
+        <br>
     </div>
 
 
@@ -80,7 +86,7 @@
         <button type="button" class="submit_b2"><a href="address-form.php">Add New Address</a></button>
         </div>
         <!-- <a href="address-form.php" class="link-colors">Add New Address</a> -->
-
+        <br>
         <div class="center">
             <h3 class="blue-colorizer">Payment Information</h3>
             <table class="center">
