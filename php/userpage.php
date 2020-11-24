@@ -37,21 +37,21 @@
     <h1 class = "account-header">Account Overview</h1>
 
 <!-- contact info -->
-    <div id="contact_info">
-        <h2>Contact Information</h2>
+    <div class="left-c">
+        <h2 class="blue-colorizer" >Contact Information</h2>
         <br>
-        <p>Username: <?php echo $_SESSION['name']; ?></p>
-        <p>Email: <?php echo $_SESSION['email']; ?></p>
+        <p class="blue-colorizer">Username: <?php echo $_SESSION['name']; ?></p>
+        <p class="blue-colorizer">Email: <?php echo $_SESSION['email']; ?></p>
         <br>
-        <button type="button" class="submit_b"><a href="">Edit</a></button>
+        <button type="button" class="submit_b2"><a href="">Edit</a></button>
         <br>
-        <button type="button" class="submit_b"><a href="">Change Password</a></button>
+        <button type="button" class="submit_b2"><a href="">Change Password</a></button>
     </div>
 
 
-    <div id="address_form">
-        <h2>Address</h2>
-        <h3>Address Book</h3>
+    <div class="right-c">
+        <h2 class="blue-colorizer">Address</h2>
+        <h3 class="blue-colorizer">Address Book</h3>
     
         <?php foreach ($addresses as $address):?>
         <div>
@@ -65,10 +65,11 @@
             </form>
         </div>
         <?php endforeach;?>
-        <a href="address-form.php">Add New Address</a>
+        <button type="button" class="submit_b2"><a href="">Add New Address</a></button>
+        <!-- <a href="address-form.php" class="link-colors">Add New Address</a> -->
 
         <div>
-            <h3>Payment Information</h3>
+            <h3 class="blue-colorizer">Payment Information</h3>
             <?php foreach ($cards as $card):?>
                 <div>
                 <p>**** **** **** <?php echo substr ($card['number'], -4);?></p>
@@ -78,12 +79,12 @@
                 </form>
                 </div>
             <?php endforeach;?>
-
-            <a href="card-form.php">Add New Card</a>
+            <button type="button" class="submit_b2"><a href="">Add New Card</a></button> 
+            <!-- <a href="card-form.php" class="link-colors">Add New Card</a> -->
         </div>
 
         <div>
-            <h3>Orders</h3>
+            <h3 class="blue-colorizer">Orders</h3>
             <table>
                 <tr>
                     <th>Order ID</th>
