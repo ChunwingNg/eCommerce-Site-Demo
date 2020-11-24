@@ -1,4 +1,15 @@
 <?php
+
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    } 
+
+    if(isset($_SESSION['isLogged']) && $_SESSION['isLogged'] == 1){
+        header("Location: homepage.php");
+        exit;
+    }
+    
     require ('database-connection.php');
 ?>
 
