@@ -9,8 +9,9 @@
     if(isset($_POST['address_id'], $_POST['card_id'])){
         $a_id = $_POST['address_id'];
         $c_id = $_POST['card_id'];
+        $u_id = $_SESSION['id'];
 
-        $db->exec("INSERT INTO orders(fk_orders_user,fk_orders_card,fk_orders_address) VALUES ($_SESSION['id'],$c_id,$a_id)");
+        $db->exec("INSERT INTO orders(fk_orders_user,fk_orders_card,fk_orders_address) VALUES($u_id,$c_id,$a_id)");
 
         foreach ($_POST as $k => $v) {
             if (strpos($k, 'quantity') !== false && is_numeric($v)) {
@@ -28,16 +29,18 @@
 
 <body>
     <div class="spacer">.</div>
-    <div class="content-main">
+    <div class="content-main center">
         <?php if($success){
-            echo "<h2>Order has been placed successfully</h2>";
+            echo "<h2>Order has been placed successfully! Thank you for your business</h2>";
             }
             else{
-             echo "<h2>Uh Oh! Something went wrong with creating your order</h2>";
+             echo "<h2>Uh Oh! Something went wrong with creating your order. :(</h2>";
             }
         ?>
-        <a href="userpage.php">Go to User Page</a>
-        <a href="homepage.php">Go to Home Page</a>
+        <div class="middle">
+            <a href="userpage.php" class="ebtn">Go to User Page</a>
+            <a href="homepage.php" class="ebtn">Go to Home Page</a>
+        </div>
     </div>
 
     <?=template_footer()?>
