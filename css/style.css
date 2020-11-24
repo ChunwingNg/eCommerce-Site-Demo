@@ -426,3 +426,17 @@
     .cart_buttons input:hover {
         background: #015CAA;
     }
+    /* Checkout page CSS  */
+    
+    .center-checkout {
+        text-align: center;
+        justify-content: center;
+        margin-left: auto;
+        margin-right: auto;
+        width: 40%;
+        margin-top: 75px;
+        background-color: #0592d33d;
+        border-radius: 10px;
+        box-shadow: -3px -3px 7px #768998, 2px 2px 5px rgba(94, 104, 121, 0.288);
+        padding: 25px 0px;
+    }
