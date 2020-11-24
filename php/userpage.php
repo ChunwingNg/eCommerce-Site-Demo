@@ -5,7 +5,7 @@
     }
 
     if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] == 0){
-        header("Location: error.php");
+        header("Location: login.php");
         exit;
     }
     require_once('database-connection.php');

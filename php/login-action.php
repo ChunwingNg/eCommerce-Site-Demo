@@ -4,10 +4,10 @@
         session_start(); 
     }  
 
-if(isset($_SESSION['isLogged']) && $_SESSION['isLogged'] == 1){
-    header("Location: error.php");
-    exit;
-}
+    if(isset($_SESSION['isLogged']) && $_SESSION['isLogged'] == 1){
+        header("Location: homepage.php");
+        exit;
+    }
 
 
 if(isset($_POST['login-action']))

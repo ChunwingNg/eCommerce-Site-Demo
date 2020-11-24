@@ -260,6 +260,33 @@ h1 {
     color: #42BCF3;
 }
 
+h2 {
+    color: #42BCF3;
+}
+
+h3 {
+    color: #C6E3ED;
+}
+
+h4 {
+    color: #0593D3;
+}
+
+.catalog_table {
+    text-align: center;
+    justify-content: center;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.center {
+    text-align: center;
+}
+
+.spacer {
+    padding: 3%;
+}
+
 
 /* userPage styling */
 
