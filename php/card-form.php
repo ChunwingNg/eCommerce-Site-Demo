@@ -8,15 +8,6 @@
         header("Location: login.php");
         exit;
     }
-    if(!isset($_SESSION['error']) || $_SESSION['error'] == 1)
-    {
-        ?>
-        <script>
-           alert("Error: Please make sure to fill a valid card number / CVV / Expiration date");
-        </script>
-        <?php
-        $_SESSION['error'] = 0;
-    }
 
     require_once('database-connection.php');
 
