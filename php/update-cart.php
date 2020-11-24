@@ -4,6 +4,12 @@
     { 
         session_start(); 
     }
+
+    if(!isset($_SESSION['isLogged']) || $_SESSION['isLogged'] == 0){
+        header("Location: login.php");
+        exit;
+    }
+
     require_once('database-connection.php');
 
     //Will add to the cart if it product id and quantity are specified
@@ -58,7 +64,8 @@
     if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
         $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
         if($num_items_in_cart== 0){
-
+            header('Location: shoppingcart.php');
+            exit;
         }
         else{
             header('Location: checkOut.php');

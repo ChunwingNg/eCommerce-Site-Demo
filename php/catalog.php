@@ -41,17 +41,18 @@
             }
         }
         else{
-            echo "<tr>
-                    <th colspan="2">Product</td>
-                    <th>Price</td>
-                    <th>Availability</td>
-                    <th></td>
-                </tr>"
+            echo "<table class='catalog_table'><tr>
+                    <th colspan='2'><h2>Product</h2></th>
+                    <th><h2>Price</h2></th>
+                    <th><h2>Availability</h2></th>
+                    <th><h2>Description</h2></th>
+                    <th></th>
+                </tr>";
             foreach ($items as $item){
-                echo "<div class='product'>"
-                        ."<h3>" . $item['name'] . "</h3>"
-                        ."<img src='" . $item['image_link'] . "'>"
-                        ."<h4>$" . $item['price'] . "</h4>";
+                echo "<tr>"
+                        ."<td><img src='" . $item['image_link'] . "' width='200' height='200'></td>"
+                        ."<td><h3>" . $item['name'] . "</h3></td>"
+                        ."<td><h3>$" . $item['price'] . "</h3></td>";
 
                 if($item['quantity'] > 20){
                     $avail = "In Stock";
@@ -63,18 +64,19 @@
                     $avail = "Low Stock";
                 }
 
-                echo "<h4>" . $avail . "</h4>"
-                        ."<p>" . $item['desc'] . "</p>"
-                            ."<form action='update-cart.php' method='post'>"
+                echo "<td><h3>" . $avail . "</h3></td>"
+                        ."<td><h4>" . $item['desc'] . "</h4></td>"
+                            ."<td><form action='update-cart.php' method='post'>"
                                 ."<input type='number' name='quantity' value=1 min=1 max=" . $item['quantity'] . " placeholder='Quantity' required>"
                                 ."<input type='hidden' name='product_id' value=" . $item['id']. ">"
-                                ."<input type='submit' value='Add To Cart'>"
-                            ."</form>"
-                        ."</div>";
+                                ."<br><input type='submit' value='Add To Cart'>"
+                            ."</form></td>"
+                        ."</tr>";
             }
         }
 
         ?>
+        </table>
     </div>
     <?=template_footer()?>
 </body>

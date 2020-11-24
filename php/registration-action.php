@@ -1,5 +1,17 @@
 <?php
 
+    if(!isset($_SESSION)) 
+    { 
+        session_start(); 
+    }  
+    require_once('database-connection.php');
+
+    if(isset($_SESSION['isLogged']) && $_SESSION['isLogged'] == 1){
+        header("Location: homepage.php");
+        exit;
+    }
+
+
 if(isset($_POST['registration-action']))
 {
     $user = filter_input(INPUT_POST, 'user');
