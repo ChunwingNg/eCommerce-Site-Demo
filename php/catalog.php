@@ -28,9 +28,8 @@
 <body>
     <div class="spacer">.</div>
     <div class="content-main">
-        <h1 class="title center">Catalog</h1>
+        <h1 class="title center bot_space">Catalog</h1>
         <?php
-
 
         if($items->rowCount() == 0){
             if($posted == 1){
