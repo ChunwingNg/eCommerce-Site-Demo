@@ -38,25 +38,25 @@
 
             <div class="field">
                 <span class="fas fa-user-astronaut"></span>
-                <input type="text" id="user" name="user" placeholder="Username"><br>
+                <input type="text" id="user" name="user" placeholder="Username" required><br>
 <!--                <label for="user">Username:</label>-->
             </div>
 
             <div class="field">
                 <span class="fas fa-lock"></span>
-                <input type="password" id="pass" name="pass" placeholder="Password">
+                <input type="password" id="pass" name="pass" placeholder="Password" required minlength="6" maxlength="25">
 <!--                <label for="pass">Password:</label>-->
             </div>
             <br>
             <div class="field">
                 <span class="fas fa-lock"></span>
-            <input type="password" id="confirmPass" name="confirmPass" placeholder="Confirm Password">
+            <input type="password" id="confirmPass" name="confirmPass" placeholder="Confirm Password" required minlength="6" maxlength="25">
 <!--            <label for="confirmPass">Confirm Password:</label>-->
             </div>
             <br>
             <div class="field">
                 <span class="far fa-envelope"></span>
-            <input type="email" id="email" name="email" placeholder="Email"><br>
+            <input type="email" id="email" name="email" placeholder="Email" required><br>
 <!--            <label for="email">Email:</label>-->
             </div>
             <br>

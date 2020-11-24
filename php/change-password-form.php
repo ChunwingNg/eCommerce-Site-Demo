@@ -37,12 +37,12 @@
         </div>
         <div class="field">
             <span class="fas fa-lock"></span>
-        <input type="password" name="newPass" placeholder="New Password">
+        <input type="password" name="newPass" placeholder="New Password" required minlength="6" maxlength="25">
 <!--        <label>Password</label>-->
         </div>
         <div class="field">
             <span class="fas fa-lock"></span>
-        <input type="password" name="newPassConfirm" placeholder="Confirm Password">
+        <input type="password" name="newPassConfirm" placeholder="Confirm Password" required minlength="6" maxlength="25">
 <!--        <label>Password</label>-->
         </div>
         <div class="field">

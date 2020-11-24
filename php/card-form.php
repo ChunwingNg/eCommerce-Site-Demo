@@ -24,16 +24,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Add Card</title>
     <link rel="stylesheet" type="text/css" href="../css/form.css">
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="../js/validation.js"></script>
 </head>
     
 <body>
 <div class="spacer">.</div>
 <div class="content">
-<header><h1>Add Address</h1></header>
-    <form action="card-add.php" method="post" id="adress-form">
+<header><h1>Add Card Information</h1></header>
+    <form action="card-add.php" method="post" id="card-form">
         <!--name on card input-->
         <label class="control-label">Full Name</label>
         <div class="field">
@@ -49,8 +50,8 @@
         <!-- card cvv input-->
         <label class="control-label">CVV</label>
         <div class="field">
-            <input id="cvv" name="cvv" type="text" placeholder="123" required>
-            <p class="help-block"></p>
+            <input id="cvv" name="cvv" type="text" placeholder="123" required minlength="3" maxlength="3">
+            <span class="error" aria-live="polite"></span>
         </div>
         <!-- expiration date input-->
         <label class="control-label">Expiration Date</label>
@@ -59,7 +60,7 @@
             <p class="help-block"></p>
         </div>
         <div class="field">
-            <button type="submit" name="card-add" value="Login" class="submit_b">Add Card</button>
+            <button type="submit" name="card-add" value="Login" class="submit_b" >Add Card</button>
         </div>
     </form>
 </body>

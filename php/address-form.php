@@ -55,13 +55,13 @@
         <!-- region input-->
         <label class="control-label">State</label>
         <div class="field">
-            <input id="state" name="state" type="text" placeholder="GA" required>
+            <input id="state" name="state" type="text" placeholder="GA" required maxlength="2">
             <p class="help-block"></p>
         </div>
         <!-- postal-code input-->
         <label class="control-label">Zip / Postal Code</label>
         <div class="field">
-            <input id="postal-code" name="postal-code" type="text" placeholder="Zip or postal code" required>
+            <input id="postal-code" name="postal-code" type="text" placeholder="Zip or postal code" required maxlength="5" minlength="5">
             <p class="help-block"></p>
         </div>
         <div class="field">

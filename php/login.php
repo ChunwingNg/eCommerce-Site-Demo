@@ -38,7 +38,7 @@
         </div>
         <div class="field">
             <span class="fas fa-lock"></span>
-        <input type="password" name="passWd" placeholder="Password">
+        <input type="password" name="passWd" placeholder="Password" required>
 <!--        <label>Password</label>-->
         </div>
         <div class="field">
