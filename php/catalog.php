@@ -49,8 +49,8 @@
                 </tr>";
             foreach ($items as $item){
                 echo "<tr>"
-                        ."<td><img src='" . $item['image_link'] . "' width='200' height='200'></td>"
-                        ."<td><h3>" . $item['name'] . "</h3></td>"
+                        ."<td><img src='" . $item['image_link'] . "' width='200' height='200' class='right'></td>"
+                        ."<td><h3 class='left'>" . $item['name'] . "</h3></td>"
                         ."<td><h3>$" . $item['price'] . "</h3></td>";
 
                 if($item['quantity'] > 20){
