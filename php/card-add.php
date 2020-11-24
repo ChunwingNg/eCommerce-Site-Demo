@@ -33,22 +33,10 @@ require_once('database-connection.php');
     str_replace('-', '', $number);
     str_replace('/', '', $exp);
     $expM = substr($exp, 0, 2);
-    $expY = substr($exp, 2);
+    $expY = substr($exp, 3);
     $expM = intval($expM);
     $expY = intval($expY);
 
-    if(strlen($number) < 16)
-    {
-        $_SESSION['error'] = 1;
-        header("Location: card-form.php");
-        die();
-    }
-    if($expY < 20)
-    {
-        $_SESSION['error'] = 1;
-        header("Location: card-form.php");
-        die();
-    }
 
     //Queries the row the username is on
     $query = 'INSERT INTO card(cvv, expMonth, expYear, name, number, fk_card_user)VALUES(:cvv, :expMonth, :expYear, :name, :number, :userId)';

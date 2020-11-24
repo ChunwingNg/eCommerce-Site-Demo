@@ -132,6 +132,10 @@
         margin-right: auto;
     }
     
+    .left {
+        float: left;
+    }
+    
     .ebtn {
         position: relative;
         display: block;
