@@ -37,54 +37,54 @@
 <?php
     include('base.php');
 ?>
-
-<div>
-    <h1>Shopping Cart</h1>
-    <form action="update-cart.php" method="post">
-        <table>
-            <thead>
-                <tr>
-                    <th colspan="2">Product</td>
-                    <th>Price</td>
-                    <th>Quantity</td>
-                    <th>Total</td>
-                </tr>
-            </thead>
-            <tbody>
-                <?php if (empty($items)): ?>
+<body>
+<div class="spacer">.</div>
+    <div class="content-main">
+        <h1 class="title center">Shopping Cart</h1>
+        <form action="update-cart.php" method="post">
+            <table class='cart_table'>
+                <thead>
                     <tr>
-                        <td colspan="5" style="text-align:center;">You have no products added in your Shopping Cart</td>
+                        <th colspan="2"><h2>Product</h2></td>
+                        <th><h2>Price</h2></td>
+                        <th><h2>Quantity</h2></td>
+                        <th><h2>Total</h2></td>
                     </tr>
-                <?php else: ?>
-                <?php foreach ($items as $item): ?>
-                <tr>
-                    <td class="img">
-                        <img src="<?=$item['image_link']?>" width="50" height="50" alt="<?=$item['name']?>">
-                    </td>
-                    <td>
-                        <p><?=$item['name']?></a>
-                        <br>
-                        <a href="update-cart.php?remove=<?=$item['id']?>">Remove</a>
-                    </td>
-                    <td class="price">&dollar;<?=$item['price']?></td>
-                    <td class="quantity">
-                        <input type="number" name="quantity-<?=$item['id']?>" value="<?=$cart_items[$item['id']]?>" min="1" max="<?=$items['quantity']?>" placeholder="Quantity" required>
-                    </td>
-                    <td class="price">&dollar;<?=$item['price'] * $cart_items[$item['id']]?></td>
-                </tr>
-                <?php endforeach; ?>
-                <?php endif; ?>
-            </tbody>
-        </table>
-        <div class="subtotal">
-            <span class="text">Total</span>
-            <span class="price">&dollar;<?=$total?></span>
-        </div>
-        <div class="buttons">
-            <input type="submit" value="Update" name="update">
-            <input type="submit" value="Place Order" name="placeorder">
-        </div>
-    </form>
-</div>
+                </thead>
+                <tbody>
+                    <?php if (empty($items)): ?>
+                        <tr>
+                            <td colspan="5" style="text-align:center;"><h1 class="title center">You have no products added in your Shopping Cart</h1></td>
+                        </tr>
+                    <?php else: ?>
+                    <?php foreach ($items as $item): ?>
+                    <tr>
+                        <td class="img">
+                            <img src="<?=$item['image_link']?>" width="100" height="100" alt="<?=$item['name']?>">
+                        </td>
+                        <td>
+                            <h2><?=$item['name']?></h2>
+                            <br>
+                            <a href="update-cart.php?remove=<?=$item['id']?>"><h3>Remove</h3></a>
+                        </td>
+                        <td class="price"><h2>&dollar;<?=$item['price']?></h2></td>
+                        <td class="quantity">
+                            <input class='input_num' type="number" name="quantity-<?=$item['id']?>" value="<?=$cart_items[$item['id']]?>" min="1" max="<?=$item['quantity']?>" placeholder="Quantity" required>
+                        </td>
+                        <td class="price"><h2>&dollar;<?=$item['price'] * $cart_items[$item['id']]?></h2></td>
+                    </tr>
+                    <?php endforeach; ?>
+                    <?php endif; ?>
+                </tbody>
+            </table>
+            <div class="subtotal">
+                <span class="text">Total</span>
+                <span class="price">&dollar;<?=$total?></span>
+            </div>
+            <div class="cart_buttons">
+                <input type="submit" value="Update" name="update">
+                <input type="submit" value="Place Order" name="placeorder">
+            </div>
+        </form>
+    </div>
 </body>
-</html>

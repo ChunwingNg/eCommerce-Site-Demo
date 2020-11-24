@@ -67,9 +67,9 @@
                 echo "<td><h3>" . $avail . "</h3></td>"
                         ."<td><h4>" . $item['desc'] . "</h4></td>"
                             ."<td><form action='update-cart.php' method='post'>"
-                                ."<input type='number' name='quantity' value=1 min=1 max=" . $item['quantity'] . " placeholder='Quantity' required>"
+                                ."<input class='input_num' type='number' name='quantity' value=1 min=1 max=" . $item['quantity'] . " placeholder='Quantity' required>"
                                 ."<input type='hidden' name='product_id' value=" . $item['id']. ">"
-                                ."<br><input type='submit' value='Add To Cart'>"
+                                ."<br><input class='input_submit' type='submit' value='Add To Cart'>"
                             ."</form></td>"
                         ."</tr>";
             }
