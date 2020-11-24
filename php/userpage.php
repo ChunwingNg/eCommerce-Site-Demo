@@ -43,9 +43,9 @@
         <p class="blue-colorizer">Username: <?php echo $_SESSION['name']; ?></p>
         <p class="blue-colorizer">Email: <?php echo $_SESSION['email']; ?></p>
         <br>
-        <button type="button" class="submit_b2"><a href="">Edit</a></button>
+        <button type="button" class="submit_b2"><a href="">Edit Account Info</a></button>
         <br>
-        <button type="button" class="submit_b"><a href="change-password-form.php">Change Password</a></button>
+        <button type="button" class="submit_b2"><a href="change-password-form.php">Change Password</a></button>
     </div>
 
 
@@ -65,7 +65,7 @@
             </form>
         </div>
         <?php endforeach;?>
-        <button type="button" class="submit_b2"><a href="">Add New Address</a></button>
+        <button type="button" class="submit_b2"><a href="address-form.php">Add New Address</a></button>
         <!-- <a href="address-form.php" class="link-colors">Add New Address</a> -->
 
         <div>
@@ -79,7 +79,7 @@
                 </form>
                 </div>
             <?php endforeach;?>
-            <button type="button" class="submit_b2"><a href="">Add New Card</a></button> 
+            <button type="button" class="submit_b2"><a href="card-form.php">Add New Card</a></button> 
             <!-- <a href="card-form.php" class="link-colors">Add New Card</a> -->
         </div>
 
