@@ -45,7 +45,7 @@
         <br>
         <button type="button" class="submit_b2"><a href="">Edit</a></button>
         <br>
-        <button type="button" class="submit_b2"><a href="">Change Password</a></button>
+        <button type="button" class="submit_b"><a href="change-password-form.php">Change Password</a></button>
     </div>
 
 

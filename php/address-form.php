@@ -33,8 +33,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Address Form</title>
-    <link rel="stylesheet" type="text/css" href="../css/main.css">
-    <link rel="stylesheet" type="text/css" href="../css/userPage.css">
+    <link rel="stylesheet" type="text/css" href="../css/form.css">
 </head>
 <body>
     <form action="addr-add.php" method="post" id="adress-form">
