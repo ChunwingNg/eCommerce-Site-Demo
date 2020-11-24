@@ -1,5 +1,8 @@
 <?php
-session_start();
+if(!isset($_SESSION)) 
+{ 
+    session_start(); 
+}
 require_once('database-connection.php');
 
 $address = filter_input(INPUT_POST, 'addr_id', FILTER_VALIDATE_INT);

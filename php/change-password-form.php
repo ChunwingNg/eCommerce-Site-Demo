@@ -25,6 +25,7 @@
 </head>
 
 <body>
+<div class="spacer">.</div>
 <div class="content">
 <header><h1>Change Password</h1></header>
 <main>

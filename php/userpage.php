@@ -50,35 +50,44 @@
 
 
     <div class="right-c">
-        <h2 class="blue-colorizer">Address</h2>
+        <div class="center">
         <h3 class="blue-colorizer">Address Book</h3>
     
+        <table class="center">
         <?php foreach ($addresses as $address):?>
-        <div>
+        <tr>
+        <td>
             <h4><?php echo $address['name'];?></h4>
             <h4><?php echo $address['line1'];?></h4>
             <h4><?php echo $address['line2'];?></h4>
             <h4><?php echo $address['city'];?>, <?php echo $address['state'];?> <?php echo $address['zip'];?></h4>
-            <form action="addr-delete.php" method="post">
+        </td>
+        <td><form action="addr-delete.php" method="post">
                 <input type="hidden" name="addr_id" value=<?php echo $address['id'];?>>
                 <input type="submit" value="Delete Address">
-            </form>
-        </div>
+            </form></td>
+        </tr>
         <?php endforeach;?>
+        </table>
         <button type="button" class="submit_b2"><a href="address-form.php">Add New Address</a></button>
+        </div>
         <!-- <a href="address-form.php" class="link-colors">Add New Address</a> -->
 
-        <div>
+        <div class="center">
             <h3 class="blue-colorizer">Payment Information</h3>
+            <table class="center">
             <?php foreach ($cards as $card):?>
-                <div>
+                <tr>
+                <td>
                 <h4>**** **** **** <?php echo substr ($card['number'], -4);?></h4>
+                </td>
+                <td>
                 <form action="card-delete.php" method="post">
                     <input type="hidden" name="card_id" value=<?php echo $card['id'];?>>
                     <input type="submit" value="Delete Card">
                 </form>
-                </div>
             <?php endforeach;?>
+            </table>
             <button type="button" class="submit_b2"><a href="card-form.php">Add New Card</a></button> 
             <!-- <a href="card-form.php" class="link-colors">Add New Card</a> -->
         </div>
@@ -93,7 +102,7 @@
                 <?php foreach ($orders as $order):?>
                     <tr>
                         <td><p class="blue-colorizer"><?php echo $order['id'];?></p></td>
-                        <td><p class="blue-colorizer"><?php echo $address['ordertotal'];?></p></td>
+                        <td><p class="blue-colorizer">$<?php echo $order['ordertotal'];?></p></td>
                     </tr>
                 <?php endforeach;?>
             </table>

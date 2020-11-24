@@ -33,6 +33,7 @@
     <div class="spacer">.</div>
     <div class="content-main center">
         <?php if($success){
+            $_SESSION['cart'] = array();
             echo "<h2>Order has been placed successfully! Thank you for your business</h2>";
             }
             else{
