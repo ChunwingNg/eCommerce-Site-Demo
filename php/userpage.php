@@ -33,7 +33,7 @@
     
 <body>
 
-
+    <div class="spacer">.</div>
     <h1 class = "account-header">Account Overview</h1>
 
 <!-- contact info -->
@@ -43,9 +43,9 @@
         <p class="blue-colorizer">Username: <?php echo $_SESSION['name']; ?></p>
         <p class="blue-colorizer">Email: <?php echo $_SESSION['email']; ?></p>
         <br>
-        <button type="button" class="submit_b2"><a href="">Edit</a></button>
+        <button type="button" class="submit_b2"><a href="">Edit Account Info</a></button>
         <br>
-        <button type="button" class="submit_b"><a href="change-password-form.php">Change Password</a></button>
+        <button type="button" class="submit_b2"><a href="change-password-form.php">Change Password</a></button>
     </div>
 
 
@@ -55,17 +55,17 @@
     
         <?php foreach ($addresses as $address):?>
         <div>
-            <p><?php echo $address['name'];?></p>
-            <p><?php echo $address['line1'];?></p>
-            <p><?php echo $address['line2'];?></p>
-            <p><?php echo $address['city'];?>, <?php echo $address['state'];?> <?php echo $address['zip'];?></p>
+            <h4><?php echo $address['name'];?></h4>
+            <h4><?php echo $address['line1'];?></h4>
+            <h4><?php echo $address['line2'];?></h4>
+            <h4><?php echo $address['city'];?>, <?php echo $address['state'];?> <?php echo $address['zip'];?></h4>
             <form action="addr-delete.php" method="post">
                 <input type="hidden" name="addr_id" value=<?php echo $address['id'];?>>
                 <input type="submit" value="Delete Address">
             </form>
         </div>
         <?php endforeach;?>
-        <button type="button" class="submit_b2"><a href="">Add New Address</a></button>
+        <button type="button" class="submit_b2"><a href="address-form.php">Add New Address</a></button>
         <!-- <a href="address-form.php" class="link-colors">Add New Address</a> -->
 
         <div>
@@ -79,21 +79,21 @@
                 </form>
                 </div>
             <?php endforeach;?>
-            <button type="button" class="submit_b2"><a href="">Add New Card</a></button> 
+            <button type="button" class="submit_b2"><a href="card-form.php">Add New Card</a></button> 
             <!-- <a href="card-form.php" class="link-colors">Add New Card</a> -->
         </div>
 
         <div>
             <h3 class="blue-colorizer">Orders</h3>
-            <table>
+            <table class="catalog_table">
                 <tr>
-                    <th>Order ID</th>
-                    <th>Amount</th>
+                    <th><h4>Order ID</h4></th>
+                    <th><h4>Amount</h4></th>
                 </tr>
                 <?php foreach ($orders as $order):?>
                     <tr>
-                        <td><?php echo $order['id'];?></td>
-                        <td><?php echo $address['ordertotal'];?></td>
+                        <td><p class="blue-colorizer"><?php echo $order['id'];?></p></td>
+                        <td><p class="blue-colorizer"><?php echo $address['ordertotal'];?></p></td>
                     </tr>
                 <?php endforeach;?>
             </table>

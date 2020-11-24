@@ -26,6 +26,9 @@
 
         $items = $stmt->fetchAll(PDO::FETCH_ASSOC);
         
+        $_SESSION['cart_items'] = $cart_items;
+        $_SESSION['cart-list'] = $items;
+        
         // Calculate the subtotal
         foreach ($items as $item) {
             $total += (float)$item['price'] * (int)$cart_items[$item['id']];

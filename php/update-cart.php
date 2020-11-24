@@ -61,15 +61,15 @@
         exit;
     }
 
-    if (isset($_POST['placeorder']) && isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
-        $num_items_in_cart = isset($_SESSION['cart']) ? count($_SESSION['cart']) : 0;
-        if($num_items_in_cart== 0){
-            header('Location: shoppingcart.php');
-            exit;
-        }
-        else{
+    if (isset($_POST['placeorder'])){
+        if(isset($_SESSION['cart']) && !empty($_SESSION['cart'])) {
             header('Location: checkOut.php');
             exit;
         }
+        else{
+            header('Location: shoppingcart.php');
+                exit;
+        }
+
     }
 ?>
