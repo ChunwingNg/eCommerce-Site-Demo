@@ -71,12 +71,12 @@
                     <p>**** **** **** <?php echo substr ($card['number'], -4);?></p> 
                 </option>
             <?php endforeach;?>
-                <input type="hidden" name="quantity-<?=$item['id']?>" value="<?=$cart_items[$item['id']]?>">
-            <?php endforeach; ?>
             
         </fieldset>
 
         <?php foreach ($items as $item): ?>
+            <input type="hidden" name="quantity-<?=$item['id']?>" value="<?=$cart_items[$item['id']]?>">
+        <?php endforeach; ?>
 
         <button type="submit">Submit</button>
         <button type="reset">Reset</button>

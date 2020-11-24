@@ -106,7 +106,7 @@ DEFAULT CHARACTER SET = utf8;
 DROP TABLE IF EXISTS `ecommerce`.`orders` ;
 
 CREATE TABLE IF NOT EXISTS `ecommerce`.`orders` (
-  `id` INT(11) NOT NULL,
+  `id` INT(11) NOT NULL AUTO_INCREMENT,
   `fk_orders_user` INT(11) NOT NULL,
   `fk_orders_card` INT(11) NOT NULL,
   `fk_orders_address` INT(11) NOT NULL,

@@ -72,7 +72,7 @@
             <h3 class="blue-colorizer">Payment Information</h3>
             <?php foreach ($cards as $card):?>
                 <div>
-                <p>**** **** **** <?php echo substr ($card['number'], -4);?></p>
+                <h4>**** **** **** <?php echo substr ($card['number'], -4);?></h4>
                 <form action="card-delete.php" method="post">
                     <input type="hidden" name="card_id" value=<?php echo $card['id'];?>>
                     <input type="submit" value="Delete Card">
