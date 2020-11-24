@@ -92,7 +92,7 @@ CREATE TABLE IF NOT EXISTS `ecommerce`.`catalog_item` (
   `name` VARCHAR(45) NOT NULL,
   `price` FLOAT NOT NULL,
   `quantity` INT(11) NOT NULL,
-  `desc` VARCHAR(45) NOT NULL,
+  `desc` VARCHAR(100) NOT NULL,
   `image_link` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `ID_UNIQUE` (`id` ASC))
