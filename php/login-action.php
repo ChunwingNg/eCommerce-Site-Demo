@@ -9,6 +9,8 @@
         exit;
     }
 
+    $_SESSION['error'] = 0;
+
 
 if(isset($_POST['login-action']))
 {
@@ -33,6 +35,8 @@ if(isset($_POST['login-action']))
         </script>
         <?php
 
+        $_SESSION['error'] = 1;
+
         header("Location: login.php");
     }
     else{
@@ -53,6 +57,7 @@ if(isset($_POST['login-action']))
                 alert("Invalid username/password combination.\nPlease try again.")
             </script>
             <?php
+            $_SESSION['error'] = 1;
             header("Location: login.php");
             exit;
         }
