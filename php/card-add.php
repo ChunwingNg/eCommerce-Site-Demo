@@ -33,7 +33,7 @@ require_once('database-connection.php');
     str_replace('-', '', $number);
     str_replace('/', '', $exp);
     $expM = substr($exp, 0, 2);
-    $expY = substr($exp, 2);
+    $expY = substr($exp, 3);
     $expM = intval($expM);
     $expY = intval($expY);
 
