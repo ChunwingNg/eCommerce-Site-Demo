@@ -12,7 +12,9 @@ Fang Zhou -
 
 Everest Britt - 
 
-Chunwing Ng - 
+Chunwing Ng - Creation of database generating script and worked on the backend. Created the functional shopping cart using php sessions and form validation through javascript. Properly
+linked each page with each other and set up checks for login to prevent certain pages from being reached without proper credentials. Helped with the creation of the theme of the webpage and optimized
+the .css to minimize the amount of files used.
 
 
 How to run and access the webpage:
