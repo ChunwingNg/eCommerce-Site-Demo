@@ -8,7 +8,7 @@ Contributions:
 Kyle Aban - Creation and design of overall theme and background while implementing
 many of the frontend portions of the website while helping with general debugging of anything that went wrong along the process.
 
-Fang Zhou - 
+Fang Zhou - Create and design the front-end interface through css and help adjust the overall style settings.
 
 Everest Britt - 
 
